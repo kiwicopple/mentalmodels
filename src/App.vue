@@ -51,41 +51,44 @@
     </md-drawer>
 
 
-    <md-content>
 
-      <md-card class="md-primary"
-      v-bind:class="{
-        'show-description': showDescription,
-        'blue-card': currentModel.category === 'General Thinking Concepts',
-        'black-card': currentModel.category === 'Numeracy',
-        'purple-card': currentModel.category === 'Systems',
-        'green-card': currentModel.category === 'Physical World',
-        'orange-card': currentModel.category === 'The Biological World',
-        'pink-card': currentModel.category === 'Human Nature & Judgment',
-        'yellow-card': currentModel.category === 'Microeconomics & Strategy',
-        'red-card': currentModel.category === 'Military & War',
-      }">
-        <md-card-header>
-          <md-card-header-text>
-            <div class="md-title">{{currentModel.name}}</div>
-            <div class="md-subhead">{{currentModel.category}}</div>
-          </md-card-header-text>
-        </md-card-header>
-        <md-card-content v-show="showDescription" class="description">
-           {{currentModel.description}}
-         </md-card-content>
-        <md-card-actions>
-          <md-button @click="nextModel()"  v-show="showDescription" class="btn-next">Next</md-button>
-          <md-button @click="showDetails()" v-show="!showDescription">Show details</md-button>
-        </md-card-actions>
-      </md-card>
+      <div class="md-layout md-gutter md-alignment-center">
+        <div class="md-layout-item md-size-50 md-small-size-100">
+          <md-card class="md-primary"
+          v-bind:class="{
+            'show-description': showDescription,
+            'blue-card': currentModel.category === 'General Thinking Concepts',
+            'black-card': currentModel.category === 'Numeracy',
+            'purple-card': currentModel.category === 'Systems',
+            'green-card': currentModel.category === 'Physical World',
+            'orange-card': currentModel.category === 'The Biological World',
+            'pink-card': currentModel.category === 'Human Nature & Judgment',
+            'yellow-card': currentModel.category === 'Microeconomics & Strategy',
+            'red-card': currentModel.category === 'Military & War',
+          }">
+            <md-card-header>
+              <md-card-header-text>
+                <div class="md-title">{{currentModel.name}}</div>
+                <div class="md-subhead">{{currentModel.category}}</div>
+              </md-card-header-text>
+            </md-card-header>
+            <md-card-content v-show="showDescription" class="description">
+               {{currentModel.description}}
+             </md-card-content>
+            <md-card-actions>
+              <md-button @click="nextModel()"  v-show="showDescription" class="btn-next">Next</md-button>
+              <md-button @click="showDetails()" v-show="!showDescription">Show details</md-button>
+            </md-card-actions>
+          </md-card>
 
-      <p class="md-caption"> {{cardIndex + 1}} / {{shuffledModels.length}}</p>
+          <p class="md-caption"> {{cardIndex + 1}} / {{shuffledModels.length}}</p>
+        </div>
 
-      <div>
-  </div>
+      </div>
 
-    </md-content>
+
+
+
   </div>
 </template>
 
@@ -184,7 +187,7 @@ export default {
     }
   }
 
-  .md-content {
+  .md-layout, .md-content {
     padding: 16px;
   }
   .description {
