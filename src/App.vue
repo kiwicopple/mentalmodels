@@ -42,6 +42,7 @@
         'show-description': showDescription,
         'blue-card': currentModel.category === 'General Thinking Concepts',
         'black-card': currentModel.category === 'Numeracy',
+        'purple-card': currentModel.category === 'Systems',
       }">
         <md-card-header>
           <md-card-header-text>
@@ -54,7 +55,7 @@
          </md-card-content>
         <md-card-actions>
           <md-button @click="nextModel()"  v-show="showDescription" class="btn-next">Next</md-button>
-          <md-button @click="showDetails()" v-show="!showDescription">Description</md-button>
+          <md-button @click="showDetails()" v-show="!showDescription">Show details</md-button>
         </md-card-actions>
       </md-card>
 
@@ -167,11 +168,15 @@ export default {
     white-space: pre-wrap;
   }
   .blue-card {
-    background: blue !important;
+    background: #2196F3 !important;
     color: white !important;
   }
   .black-card {
     background: black !important;
+    color: white !important;
+  }
+  .purple-card {
+    background: #9C27B0 !important;
     color: white !important;
   }
   .md-card.show-description {
