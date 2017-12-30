@@ -43,6 +43,11 @@
         'blue-card': currentModel.category === 'General Thinking Concepts',
         'black-card': currentModel.category === 'Numeracy',
         'purple-card': currentModel.category === 'Systems',
+        'green-card': currentModel.category === 'Physical World',
+        'orange-card': currentModel.category === 'The Biological World',
+        'pink-card': currentModel.category === 'Human Nature & Judgment',
+        'yellow-card': currentModel.category === 'Microeconomics & Strategy',
+        'red-card': currentModel.category === 'Military & War',
       }">
         <md-card-header>
           <md-card-header-text>
@@ -177,6 +182,26 @@ export default {
   }
   .purple-card {
     background: #9C27B0 !important;
+    color: white !important;
+  }
+  .green-card {
+    background: #4CAF50 !important;
+    color: white !important;
+  }
+  .orange-card {
+    background: #FF9800 !important;
+    color: white !important;
+  }
+  .red-card {
+    background: #f44336 !important;
+    color: white !important;
+  }
+  .yellow-card {
+    background: #FFEB3B !important;
+    color: #000 !important;
+  }
+  .red-card {
+    background: #E91E63 !important;
     color: white !important;
   }
   .md-card.show-description {
