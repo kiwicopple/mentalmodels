@@ -30,7 +30,7 @@
 
       <md-content>
         <h3 class="md-caption">About</h3>
-        <p>Mental models are core concepts. They unchanging fundamentals about a particular subject.<br> Learning these core concepts will give you a better comprehension of the world and help you to make rational decisions.</p>
+        <p>Mental models are "core concepts". They unchanging fundamentals about a particular subject.<br> Learning these core concepts will give you a better comprehension of the world and help you to make rational decisions.</p>
         <p>This app is a list of 113 mental models grouped into 8 color-coded categories. You are randomly shown one mental model as a "flash card", with the description on the "back".</p>
         <p>Try to do a few each day. Spaced repetition will help you to remember. </p>
       </md-content>
