@@ -31,7 +31,7 @@
       <md-content>
         <h3 class="md-caption">About</h3>
         <p>Mental models are "core concepts". They unchanging fundamentals for a particular subject.<br> Learning these concepts will give you a better comprehension of the world and help you make rational decisions.</p>
-        <p>This app is a list of 113 mental models, grouped into 8 color-coded categories. The models are shuffled in a randome order.</p>
+        <p>This app is a list of 113 mental models, grouped into 8 color-coded categories. The models are shuffled.</p>
         <p>Try to do a few each day. Spaced repetition will help you remember. If you are using a mobile you can add this page to your homescreen and use it offline.</p>
       </md-content>
 
