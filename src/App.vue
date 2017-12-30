@@ -15,12 +15,17 @@
 
     <md-drawer :md-active.sync="showNavigation" class="sidebar">
 
+      <div class="close-sidebar">
+        <md-button class="md-icon-button" @click="() => {showNavigation = false}">
+          <img src="/static/img/x.svg" alt="X" />
+        </md-button>
+      </div>
       <md-content>
         <img src="/static/img/mm-logo.svg" class="main-logo" />
       </md-content>
 
       <md-list>
-        <md-subheader>Filter</md-subheader>
+        <md-subheader>Filter Topics</md-subheader>
 
         <md-list-item v-for="c in categoryList">
           <md-checkbox v-model="categories" :value="c" class="md-accent" />
@@ -204,6 +209,9 @@ export default {
         margin: 10px 0 0 0;
       }
     }
+  }
+  .close-sidebar {
+    text-align: right;
   }
 
   .md-layout, .md-content {
