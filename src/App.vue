@@ -71,6 +71,12 @@
                 <div class="md-title">{{currentModel.name}}</div>
                 <div class="md-subhead">{{currentModel.category}}</div>
               </md-card-header-text>
+              <md-menu md-size="big" md-direction="bottom-end">
+                <md-button class="md-icon-button" @click="google(currentModel)">
+                  <img src="/static/img/google.svg" alt="G" />
+                </md-button>
+              </md-menu>
+            </md-card-header>
             </md-card-header>
             <md-card-content class="description">
                {{currentModel.description}}
@@ -136,6 +142,10 @@ export default {
     previousModel () {
       this.showDescription = false
       this.cardIndex = (this.cardIndex - 1) < 0 ? (this.shuffledModels.length - 1) : this.cardIndex - 1
+    },
+    google (model) {
+      let url = 'https://www.google.com/search?q=' + model.name
+      window.open(url, '_blank')
     },
     shuffle (array) {
       let currentIndex = array.length
