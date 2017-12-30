@@ -2,37 +2,38 @@
   <div class="page-container md-layout-column">
     <md-toolbar  md-elevation="0">
       <md-button class="md-icon-button" @click="showNavigation = true">
-        <md-icon>menu</md-icon>
+        <img src="/static/img/icons/icon-128x128.png" />
       </md-button>
       <!-- <span class="md-title">Mental Models</span> -->
     </md-toolbar>
 
-    <md-drawer :md-active.sync="showNavigation">
-      <md-toolbar class="md-transparent" md-elevation="0">
-        <span class="md-title">My App name</span>
-      </md-toolbar>
+    <md-drawer :md-active.sync="showNavigation" class="sidebar">
 
-      <md-list>
-        <md-list-item>
-          <md-icon>move_to_inbox</md-icon>
-          <span class="md-list-item-text">Inbox</span>
-        </md-list-item>
+      <md-content>
+        <img src="/static/img/mm-logo.svg" class="main-logo" />
+      </md-content>
 
-        <md-list-item>
-          <md-icon>send</md-icon>
-          <span class="md-list-item-text">Sent Mail</span>
-        </md-list-item>
+      <md-content>
+        <h3 class="md-caption">About</h3>
+        <p>Mental Models are ways of thinking. <br> You can use them in real-life situations to make rationale decisions.</p>
+        <p>This app is a list of 113 mental models, grouped into categories. You are randomly shown one mental model as a "flash card", with the description on the "back".</p>
+        <p>Try to do a few each day. The spaced repetition will help you to remember them and to act rationally throughout the day.</p>
+      </md-content>
 
-        <md-list-item>
-          <md-icon>delete</md-icon>
-          <span class="md-list-item-text">Trash</span>
-        </md-list-item>
+      <md-content>
+        <h3 class="md-caption">Acknowledgements</h3>
+        <p>Credit for all mental models goes to <a href="https://www.farnamstreetblog.com/mental-models/" target="_blank">Farnam Street</a>.</p>
+      </md-content>
+      <md-content>
+        <h3 class="md-caption">Support</h3>
+        <p>I don't plan to put adwords on this site. <br>
+          <small>Warning: plug (sorry)</small><br>
+          If you want to show your the check out one of my other sites: <br>
+          <a href="https://pollygot.com" target="_blank" class="padded">Pollygot</a> <br>
+          <a href="https://braineebox.com" target="_blank" class="padded">BraineeBox</a>
+        </p>
+      </md-content>
 
-        <md-list-item>
-          <md-icon>error</md-icon>
-          <span class="md-list-item-text">Spam</span>
-        </md-list-item>
-      </md-list>
     </md-drawer>
 
     <md-content>
@@ -104,10 +105,24 @@
   * {
     transition: all 0.2s ease;
   }
-   // Demo purposes only
+  .main-logo {
+    width: 80%;
+    max-width: 200px;
+    display: block;
+    margin: 0;
+  }
+
   .md-drawer {
-    width: 230px;
-    max-width: calc(100vw - 125px);
+    width: 80%;
+    max-width: 450px;
+
+    a {
+      color: #4E74FF !important;
+      &.padded {
+        display: inline-block;
+        margin: 10px 0 0 0;
+      }
+    }
   }
 
   .md-content {
