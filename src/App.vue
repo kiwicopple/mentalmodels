@@ -167,7 +167,7 @@ export default {
     background: #ffffff !important;
     background-color: #ffffff !important;
   }
-  body {
+  html, body {
     overflow-x: hidden;
     width: 100%;
     max-width: 100%;
