@@ -5,6 +5,12 @@
         <img src="/static/img/icons/icon-128x128.png" />
       </md-button>
       <!-- <span class="md-title">Mental Models</span> -->
+
+      <div class="md-toolbar-section-end">
+        <md-button class="md-icon-button" @click="showSidepanel = true">
+          <md-icon>filter_list</md-icon>
+        </md-button>
+      </div>
     </md-toolbar>
 
     <md-drawer :md-active.sync="showNavigation" class="sidebar">
@@ -32,6 +38,18 @@
           </small>
         </p>
       </md-content>
+
+    </md-drawer>
+
+    <md-drawer class="md-right" :md-active.sync="showSidepanel">
+      <md-list>
+        <md-subheader>Filter</md-subheader>
+
+        <md-list-item v-for="c in categoryList">
+          <md-checkbox v-model="categories" :value="c" class="md-accent" />
+          <span class="md-list-item-text">{{c}}</span>
+        </md-list-item>
+      </md-list>
 
     </md-drawer>
 
@@ -78,14 +96,26 @@ export default {
     showNavigation: false,
     showSidepanel: false,
     showDescription: false,
-    cardIndex: 0
+    cardIndex: 0,
+    categories: [
+      'General Thinking Concepts',
+      'Numeracy',
+      'Systems',
+      'Physical World',
+      'The Biological World',
+      'Human Nature & Judgment',
+      'Microeconomics & Strategy',
+      'Military & War'
+    ]
   }),
   computed: {
     ...mapGetters([
-      'modelList'
+      'modelList',
+      'categoryList'
     ]),
     shuffledModels: function () {
-      return this.shuffle(this.modelList)
+      let filtered = this.modelList.filter(m => this.categories.includes(m.category))
+      return this.shuffle(filtered)
     },
     currentModel: function () {
       return this.shuffledModels[this.cardIndex]
@@ -199,8 +229,11 @@ export default {
   .yellow-card {
     background: #FFEB3B !important;
     color: #000 !important;
+    .md-button {
+      color: #000 !important;
+    }
   }
-  .red-card {
+  .pink-card {
     background: #E91E63 !important;
     color: white !important;
   }

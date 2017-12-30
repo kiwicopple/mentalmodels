@@ -12,8 +12,10 @@ import {
   MdList,
   MdIcon,
   MdContent,
+  MdCheckbox,
   MdCard,
-  MdDrawer
+  MdDrawer,
+  MdSubheader
 } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
 
@@ -23,8 +25,10 @@ Vue.use(MdLayout)
 Vue.use(MdDrawer)
 Vue.use(MdIcon)
 Vue.use(MdContent)
+Vue.use(MdCheckbox)
 Vue.use(MdCard)
 Vue.use(MdList)
+Vue.use(MdSubheader)
 
 Vue.config.productionTip = false
 

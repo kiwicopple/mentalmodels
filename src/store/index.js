@@ -3,7 +3,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex)
 
 const getters = {
-  modelList: state => state.models
+  modelList: state => state.models,
+  categoryList: state => [...new Set(state.models.map(item => item.category))]
 }
 
 const state = {
