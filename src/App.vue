@@ -15,9 +15,9 @@
 
       <md-content>
         <h3 class="md-caption">About</h3>
-        <p>Mental Models are ways of thinking. <br> You can use them in real-life situations to make rationale decisions.</p>
+        <p>Mental models are ways of thinking. <br> You can use them to make rationale decisions.</p>
         <p>This app is a list of 113 mental models, grouped into categories. You are randomly shown one mental model as a "flash card", with the description on the "back".</p>
-        <p>Try to do a few each day. The spaced repetition will help you to remember them and to act rationally throughout the day.</p>
+        <p>Try to do a few each day. Spaced repetition will help you to remember. Daily practice will condition you to think rationally.</p>
       </md-content>
 
       <md-content>
@@ -26,11 +26,10 @@
       </md-content>
       <md-content>
         <h3 class="md-caption">Support</h3>
-        <p>I don't plan to put adwords on this site. <br>
-          <small>Warning: plug (sorry)</small><br>
-          If you want to show your the check out one of my other sites: <br>
+        <p><small>I don't plan to put adwords on this site, but if you want to show your support then check out one of my other sites. <br>
           <a href="https://pollygot.com" target="_blank" class="padded">Pollygot</a> <br>
-          <a href="https://braineebox.com" target="_blank" class="padded">BraineeBox</a>
+          <a href="https://braineebox.com" target="_blank" class="padded">BraineeBox</a><br>
+          </small>
         </p>
       </md-content>
 
@@ -38,43 +37,82 @@
 
     <md-content>
 
-      <md-card class="md-primary" md-theme="blue-card" v-bind:class="{ 'show-description': showDescription }">
+      <md-card class="md-primary"
+      v-bind:class="{
+        'show-description': showDescription,
+        'blue-card': currentModel.category === 'General Thinking Concepts',
+        'black-card': currentModel.category === 'Numeracy',
+      }">
         <md-card-header>
           <md-card-header-text>
-            <div class="md-title">Inversion</div>
-            <div class="md-subhead">General Thinking Concepts</div>
+            <div class="md-title">{{currentModel.name}}</div>
+            <div class="md-subhead">{{currentModel.category}}</div>
           </md-card-header-text>
         </md-card-header>
-        <md-card-content v-show="showDescription" >
-           Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio itaque ea, nostrum odio. Dolores, sed accusantium quasi non, voluptas eius illo quas, saepe voluptate pariatur in deleniti minus sint. Excepturi.
+        <md-card-content v-show="showDescription" class="description">
+           {{currentModel.description}}
          </md-card-content>
         <md-card-actions>
-          <md-button @click="nextModel()"  v-show="showDescription" class="btn-next md-raised md-primary">Next</md-button>
+          <md-button @click="nextModel()"  v-show="showDescription" class="btn-next">Next</md-button>
           <md-button @click="showDetails()" v-show="!showDescription">Description</md-button>
         </md-card-actions>
       </md-card>
+
+      <p class="md-caption"> {{cardIndex + 1}} / {{shuffledModels.length}}</p>
 
     </md-content>
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'app',
-    data: () => ({
-      showNavigation: false,
-      showSidepanel: false,
-      showDescription: false
-    }),
-    methods: {
-      showDetails () {
-        this.showDescription = true
-      },
-      nextModel () {
-        this.showDescription = false
+import { mapGetters } from 'vuex'
+export default {
+  name: 'app',
+  data: () => ({
+    showNavigation: false,
+    showSidepanel: false,
+    showDescription: false,
+    cardIndex: 0
+  }),
+  computed: {
+    ...mapGetters([
+      'modelList'
+    ]),
+    shuffledModels: function () {
+      return this.shuffle(this.modelList)
+    },
+    currentModel: function () {
+      return this.shuffledModels[this.cardIndex]
+    }
+  },
+  methods: {
+    showDetails () {
+      this.showDescription = true
+    },
+    nextModel () {
+      this.showDescription = false
+      this.cardIndex = (this.cardIndex + 1) >= this.shuffledModels.length ? 0 : this.cardIndex + 1
+    },
+    shuffle (array) {
+      let currentIndex = array.length
+      let temporaryValue
+      let randomIndex
+
+      // While there remain elements to shuffle...
+      while (currentIndex !== 0) {
+        // Pick a remaining element...
+        randomIndex = Math.floor(Math.random() * currentIndex)
+        currentIndex -= 1
+
+        // And swap it with the current element.
+        temporaryValue = array[currentIndex]
+        array[currentIndex] = array[randomIndex]
+        array[randomIndex] = temporaryValue
       }
+      return array
     }
   }
+}
 </script>
 
 <style lang="scss" scoped>
@@ -102,11 +140,8 @@
   // @import "~vue-material/base/theme";
   @import "~vue-material/dist/components/MdCard/theme";
 
-  * {
-    transition: all 0.2s ease;
-  }
   .main-logo {
-    width: 80%;
+    width: 50%;
     max-width: 200px;
     display: block;
     margin: 0;
@@ -128,11 +163,21 @@
   .md-content {
     padding: 16px;
   }
-
+  .description {
+    white-space: pre-wrap;
+  }
+  .blue-card {
+    background: blue !important;
+    color: white !important;
+  }
+  .black-card {
+    background: black !important;
+    color: white !important;
+  }
   .md-card.show-description {
     background: #f9f8f8 !important;
     color: #333 !important;
-    .md-title, .md-subhead {
+    .md-title, .md-subhead, .btn-next {
       color: #333 !important;
     }
   }
