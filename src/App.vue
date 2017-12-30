@@ -76,6 +76,7 @@
                {{currentModel.description}}
              </md-card-content>
             <md-card-actions class="actions">
+              <md-button @click="previousModel()"  class="btn-next">Back</md-button>
               <md-button @click="nextModel()"  class="btn-next">Next</md-button>
             </md-card-actions>
           </md-card>
@@ -131,6 +132,10 @@ export default {
     nextModel () {
       this.showDescription = false
       this.cardIndex = (this.cardIndex + 1) >= this.shuffledModels.length ? 0 : this.cardIndex + 1
+    },
+    previousModel () {
+      this.showDescription = false
+      this.cardIndex = (this.cardIndex - 1) < 0 ? (this.shuffledModels.length - 1) : this.cardIndex - 1
     },
     shuffle (array) {
       let currentIndex = array.length
