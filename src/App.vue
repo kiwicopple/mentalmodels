@@ -169,9 +169,8 @@ export default {
   }
   body {
     overflow-x: hidden;
-  }
-  * {
-    border-style:solid;
+    width: 100%;
+    max-width: 100%;
   }
   .main-logo {
     width: 50%;
