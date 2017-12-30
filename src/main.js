@@ -4,6 +4,25 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+import {
+  MdButton,
+  MdToolbar,
+  MdLayout,
+  MdList,
+  MdIcon,
+  MdContent,
+  MdDrawer
+} from 'vue-material/dist/components'
+import 'vue-material/dist/vue-material.min.css'
+
+Vue.use(MdButton)
+Vue.use(MdToolbar)
+Vue.use(MdLayout)
+Vue.use(MdDrawer)
+Vue.use(MdIcon)
+Vue.use(MdContent)
+Vue.use(MdList)
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

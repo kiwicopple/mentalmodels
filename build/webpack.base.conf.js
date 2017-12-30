@@ -1,4 +1,5 @@
 'use strict'
+require("babel-polyfill");
 
 const path = require('path')
 const utils = require('./utils')
@@ -11,7 +12,7 @@ function resolve (dir) {
 
 module.exports = {
   entry: {
-    app: './src/main.js'
+    app: ["babel-polyfill", './src/main.js']
   },
   output: {
     path: config.build.assetsRoot,
