@@ -170,6 +170,9 @@ export default {
   body {
     overflow-x: hidden;
   }
+  * {
+    border-style:solid;
+  }
   .main-logo {
     width: 50%;
     max-width: 200px;
