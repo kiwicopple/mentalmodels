@@ -167,6 +167,9 @@ export default {
     background: #ffffff !important;
     background-color: #ffffff !important;
   }
+  body {
+    overflow-x: hidden;
+  }
   .main-logo {
     width: 50%;
     max-width: 200px;
