@@ -11,6 +11,7 @@ import {
   MdList,
   MdIcon,
   MdContent,
+  MdCard,
   MdDrawer
 } from 'vue-material/dist/components'
 import 'vue-material/dist/vue-material.min.css'
@@ -21,6 +22,7 @@ Vue.use(MdLayout)
 Vue.use(MdDrawer)
 Vue.use(MdIcon)
 Vue.use(MdContent)
+Vue.use(MdCard)
 Vue.use(MdList)
 
 Vue.config.productionTip = false
