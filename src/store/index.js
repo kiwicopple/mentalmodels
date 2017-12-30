@@ -463,13 +463,6 @@ Most complex biological organisms have an innate feel for how they should organi
       name: `Self-Preservation Instincts`,
       category: 'The Biological World',
       description: `
-
-`
-    },
-    {
-      name: ``,
-      category: 'The Biological World',
-      description: `
 Without a strong self-preservation instinct in an organism’s DNA, it would tend to disappear over time, thus eliminating that DNA. While cooperation is another important model, the self-preservation instinct is strong in all organisms and can cause violent, erratic, and/or destructive behavior for those around them.
 `
     },

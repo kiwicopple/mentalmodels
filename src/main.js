@@ -5,30 +5,35 @@ import App from './App'
 import router from './router'
 import store from './store'
 
-import {
-  MdButton,
-  MdToolbar,
-  MdLayout,
-  MdList,
-  MdIcon,
-  MdContent,
-  MdCheckbox,
-  MdCard,
-  MdDrawer,
-  MdSubheader
-} from 'vue-material/dist/components'
+// import {
+//   MdButton,
+//   MdToolbar,
+//   MdLayout,
+//   MdList,
+//   MdIcon,
+//   MdContent,
+//   MdCheckbox,
+//   MdCard,
+//   MdDrawer,
+//   MdSubheader
+// } from 'vue-material/dist/components'
+// import 'vue-material/dist/vue-material.min.css'
+//
+// Vue.use(MdButton)
+// Vue.use(MdToolbar)
+// Vue.use(MdLayout)
+// Vue.use(MdDrawer)
+// Vue.use(MdIcon)
+// Vue.use(MdContent)
+// Vue.use(MdCheckbox)
+// Vue.use(MdCard)
+// Vue.use(MdList)
+// Vue.use(MdSubheader)
+import VueMaterial from 'vue-material'
 import 'vue-material/dist/vue-material.min.css'
+import 'vue-material/dist/theme/default.css'
 
-Vue.use(MdButton)
-Vue.use(MdToolbar)
-Vue.use(MdLayout)
-Vue.use(MdDrawer)
-Vue.use(MdIcon)
-Vue.use(MdContent)
-Vue.use(MdCheckbox)
-Vue.use(MdCard)
-Vue.use(MdList)
-Vue.use(MdSubheader)
+Vue.use(VueMaterial)
 
 Vue.config.productionTip = false
 

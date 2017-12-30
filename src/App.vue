@@ -6,11 +6,11 @@
       </md-button>
       <!-- <span class="md-title">Mental Models</span> -->
 
-      <div class="md-toolbar-section-end">
+      <!-- <div class="md-toolbar-section-end">
         <md-button class="md-icon-button" @click="showSidepanel = true">
           <md-icon>filter_list</md-icon>
         </md-button>
-      </div>
+      </div> -->
     </md-toolbar>
 
     <md-drawer :md-active.sync="showNavigation" class="sidebar">
@@ -19,11 +19,20 @@
         <img src="/static/img/mm-logo.svg" class="main-logo" />
       </md-content>
 
+      <md-list>
+        <md-subheader>Filter</md-subheader>
+
+        <md-list-item v-for="c in categoryList">
+          <md-checkbox v-model="categories" :value="c" class="md-accent" />
+          <span class="md-list-item-text">{{c}}</span>
+        </md-list-item>
+      </md-list>
+
       <md-content>
         <h3 class="md-caption">About</h3>
-        <p>Mental models are ways of thinking. <br> You can use them to make rationale decisions.</p>
-        <p>This app is a list of 113 mental models, grouped into categories. You are randomly shown one mental model as a "flash card", with the description on the "back".</p>
-        <p>Try to do a few each day. Spaced repetition will help you to remember. Daily practice will condition you to think rationally.</p>
+        <p>Mental models are core concepts. They unchanging fundamentals about a particular subject.<br> Learning these core concepts will give you a better comprehension of the world and help you to make rational decisions.</p>
+        <p>This app is a list of 113 mental models grouped into 8 categories. You are randomly shown one mental model as a "flash card", with the description on the "back".</p>
+        <p>Try to do a few each day. Spaced repetition will help you to remember. </p>
       </md-content>
 
       <md-content>
@@ -41,17 +50,6 @@
 
     </md-drawer>
 
-    <md-drawer class="md-right" :md-active.sync="showSidepanel">
-      <md-list>
-        <md-subheader>Filter</md-subheader>
-
-        <md-list-item v-for="c in categoryList">
-          <md-checkbox v-model="categories" :value="c" class="md-accent" />
-          <span class="md-list-item-text">{{c}}</span>
-        </md-list-item>
-      </md-list>
-
-    </md-drawer>
 
     <md-content>
 
@@ -83,6 +81,9 @@
       </md-card>
 
       <p class="md-caption"> {{cardIndex + 1}} / {{shuffledModels.length}}</p>
+
+      <div>
+  </div>
 
     </md-content>
   </div>
@@ -151,31 +152,18 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
   @import "~vue-material/dist/theme/engine"; // Import the theme engine
   @include md-register-theme("default", (
     primary: rgba(0,0,0,0.1), // The primary color of your application
     accent: md-get-palette-color(red, A200) // The accent and secondary color
   ));
-  @include md-register-theme("green-card", (
-    primary: md-get-palette-color(green, 500)
-  ));
-  @include md-register-theme("blu-card", (
-    primary: md-get-palette-color(black, 500)
-  ));
-  @include md-register-theme("blue-card", (
-    primary: md-get-palette-color(blue, 500)
-  ));
-  @include md-register-theme("purple-card", (
-    primary: md-get-palette-color(purple, 500)
-  ));
-  @include md-register-theme("orange-card", (
-    primary: md-get-palette-color(orange, 500)
-  ));
   @import "~vue-material/dist/theme/all"; // Apply the theme
-  // @import "~vue-material/base/theme";
-  @import "~vue-material/dist/components/MdCard/theme";
 
+  #overide-bg-white {
+    background: #ffffff !important;
+    background-color: #ffffff !important;
+  }
   .main-logo {
     width: 50%;
     max-width: 200px;
