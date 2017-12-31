@@ -4,13 +4,6 @@
       <md-button class="md-icon-button" @click="showNavigation = true">
         <img src="/static/img/icons/icon-128x128.png" />
       </md-button>
-      <!-- <span class="md-title">Mental Models</span> -->
-
-      <!-- <div class="md-toolbar-section-end">
-        <md-button class="md-icon-button" @click="showSidepanel = true">
-          <md-icon>filter_list</md-icon>
-        </md-button>
-      </div> -->
     </md-toolbar>
 
     <md-drawer :md-active.sync="showNavigation" class="sidebar">
@@ -26,9 +19,9 @@
 
       <md-list>
         <md-subheader>Filter Topics</md-subheader>
-        <md-list-item @click="toggleAllCategories">Toggle All</md-list-item>
+        <md-list-item @click="toggleSelectedCategories">Toggle All</md-list-item>
         <md-list-item v-for="(c, index) in categoryList" :key="index">
-          <md-checkbox v-model="categories" :value="c" class="md-accent" />
+          <md-checkbox :value="c" class="md-accent selected" v-model="categories" />
           <span class="md-list-item-text">{{c}} ({{categoryCount(c)}})</span>
         </md-list-item>
       </md-list>
@@ -67,23 +60,7 @@
     </md-drawer>
 
 
-
-      <div class="md-layout md-gutter md-alignment-center">
-        <div class="md-layout-item md-size-50 md-small-size-100">
-          <EmptyCard v-if="!shuffledModels.length" />
-          <p class="md-caption" v-if="shuffledModels.length"> {{cardIndex + 1}} / {{shuffledModels.length}}</p>
-          <ModelCard
-            v-if="shuffledModels.length"
-            :model="currentModel"
-            @onNext="nextModel"
-            @onPrevious="previousModel"
-          />
-          <Form :model="currentModel" v-if="shuffledModels.length" />
-        </div>
-
-      </div>
-
-
+    <router-view></router-view>
 
 
   </div>
@@ -91,16 +68,11 @@
 
 <script>
 import { mapGetters } from 'vuex'
-import EmptyCard from './components/EmptyCard'
-import ModelCard from './components/ModelCard'
-import Form from './components/Form'
 export default {
   name: 'app',
-  components: { EmptyCard, ModelCard, Form },
   data: () => ({
     showNavigation: false,
     showSidepanel: false,
-    cardIndex: 0,
     categories: [
       'Logical Fallacies',
       'General Thinking Concepts',
@@ -113,28 +85,22 @@ export default {
       'Military & War'
     ]
   }),
+  watch: {
+    categories: function () {
+      console.log('this.categories', this.categories)
+      this.$store.commit('SET_SELECTED_CATEGORIES', this.categories)
+    }
+  },
   computed: {
     ...mapGetters([
       'modelList',
-      'categoryList'
-    ]),
-    shuffledModels: function () {
-      let filtered = this.modelList.filter(m => this.categories.includes(m.category))
-      return this.shuffle(filtered)
-    },
-    currentModel: function () {
-      return this.shuffledModels[this.cardIndex]
-    }
+      'categoryList',
+      'selectedCategories'
+    ])
   },
   methods: {
     categoryCount (categoryName) {
       return this.modelList.filter(c => c.category === categoryName).length
-    },
-    nextModel () {
-      this.cardIndex = (this.cardIndex + 1) >= this.shuffledModels.length ? 0 : this.cardIndex + 1
-    },
-    previousModel () {
-      this.cardIndex = (this.cardIndex - 1) < 0 ? (this.shuffledModels.length - 1) : this.cardIndex - 1
     },
     shuffle (array) {
       let currentIndex = array.length
@@ -154,8 +120,8 @@ export default {
       }
       return array
     },
-    toggleAllCategories () {
-      this.categories = (this.categories.length === this.categoryList.length) ? [] : this.categoryList.slice(0)
+    toggleSelectedCategories () {
+      this.categories = (this.selectedCategories.length === this.categoryList.length) ? [] : this.categoryList.slice(0)
     }
   }
 }

@@ -12,11 +12,14 @@ import war from './war'
 Vue.use(Vuex)
 
 const getters = {
+  cardIndex: state => state.cardIndex,
+  categoryList: state => [...new Set(state.models.map(item => item.category))],
   modelList: state => state.models,
-  categoryList: state => [...new Set(state.models.map(item => item.category))]
+  selectedCategories: state => state.selectedCategories
 }
 
 const state = {
+  cardIndex: 0,
   models: [
     ...logicalFallacies.state.models,
     ...generalThinking.state.models,
@@ -27,10 +30,27 @@ const state = {
     ...humanNature.state.models,
     ...microeconomics.state.models,
     ...war.state.models
+  ],
+  selectedCategories: [
+    'Logical Fallacies',
+    'General Thinking Concepts',
+    'Numeracy',
+    'Systems',
+    'Physical World',
+    'The Biological World',
+    'Human Nature & Judgment',
+    'Microeconomics & Strategy',
+    'Military & War'
   ]
 }
 
 const mutations = {
+  SET_CARD_INDEX (state, payload) {
+    state.cardIndex = payload
+  },
+  SET_SELECTED_CATEGORIES (state, payload) {
+    state.selectedCategories = payload
+  }
 }
 
 const actions = {
