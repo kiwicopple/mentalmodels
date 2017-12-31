@@ -176,6 +176,7 @@ We might term this Boredom Syndrome: Most humans have the tendency to need to ac
     {
       name: `The IKEA`,
       category: 'Human Nature & Judgment',
+      credit: 'https://en.m.wikipedia.org/wiki/IKEA_effect',
       description: `
 A cognitive bias in which consumers place a disproportionately high value on products they partially created. The name derives from the name of Swedish manufacturer and furniture retailer IKEA, which sells many furniture products that require assembly.
 

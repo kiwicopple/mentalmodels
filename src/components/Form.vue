@@ -1,0 +1,34 @@
+<template>
+  <form action="" name="suggestion" netlify>
+    <md-field>
+      <label>Suggest an improved description</label>
+      <md-textarea v-model="suggestion" name="suggestion"></md-textarea>
+    </md-field>
+    <input type="hidden" name="category" :value="model.category">
+    <input type="hidden" name="model" :value="model.name">
+    <div class="right">
+      <md-button type="submit" class="btn-no-margin md-raised">Send</md-button>
+    </div>
+  </form>
+</template>
+
+<script>
+export default {
+  props: ['model'],
+  name: 'EmptyCard',
+  data: () => ({
+    suggestion: ''
+  })
+}
+</script>
+<style lang="scss" scoped>
+form {
+  margin-top: 50px;
+}
+.right {
+  text-align: right;
+  .btn-no-margin {
+    margin: 0;
+  }
+}
+</style>

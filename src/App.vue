@@ -71,13 +71,14 @@
       <div class="md-layout md-gutter md-alignment-center">
         <div class="md-layout-item md-size-50 md-small-size-100">
           <EmptyCard v-if="!shuffledModels.length" />
+          <p class="md-caption" v-if="shuffledModels.length"> {{cardIndex + 1}} / {{shuffledModels.length}}</p>
           <ModelCard
             v-if="shuffledModels.length"
             :model="currentModel"
             @onNext="nextModel"
             @onPrevious="previousModel"
           />
-          <p class="md-caption" v-if="shuffledModels.length"> {{cardIndex + 1}} / {{shuffledModels.length}}</p>
+          <Form :model="currentModel" v-if="shuffledModels.length" />
         </div>
 
       </div>
@@ -92,9 +93,10 @@
 import { mapGetters } from 'vuex'
 import EmptyCard from './components/EmptyCard'
 import ModelCard from './components/ModelCard'
+import Form from './components/Form'
 export default {
   name: 'app',
-  components: { EmptyCard, ModelCard },
+  components: { EmptyCard, ModelCard, Form },
   data: () => ({
     showNavigation: false,
     showSidepanel: false,
