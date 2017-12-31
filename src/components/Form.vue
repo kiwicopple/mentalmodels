@@ -2,10 +2,11 @@
   <form action="https://formspree.io/pcopplestone@gmail.com" method="POST">
     <md-field>
       <label>Suggest an improved description</label>
-      <md-textarea v-model="suggestion" name="suggestion"></md-textarea>
+      <md-textarea v-model="suggestion"></md-textarea>
     </md-field>
     <input type="hidden" name="category" :value="model.category">
     <input type="hidden" name="model" :value="model.name">
+    <input type="hidden" name="suggestion" :value="suggestion">
     <div class="right">
       <md-button type="submit" class="btn-no-margin md-raised">Send</md-button>
     </div>
