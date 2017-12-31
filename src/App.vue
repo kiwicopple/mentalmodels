@@ -42,15 +42,22 @@
 
       <md-content>
         <h3 class="md-caption">Acknowledgements</h3>
-        <p>Credit for all mental models goes to <a href="https://www.farnamstreetblog.com/mental-models/" target="_blank">Farnam Street</a>.</p>
+        <p>
+          <small>Credit for models</small>
+        </p>
+        <ul>
+          <li><a href="https://www.farnamstreetblog.com/mental-models/" target="_blank">Farnam Street</a></li>
+          <li><a href="https://yourlogicalfallacyis.com" target="_blank">Your Logical Fallacy Is</a></li>
+        </ul>
+
       </md-content>
       <md-content>
         <h3 class="md-caption">Support</h3>
-        <p><small>I don't plan to put adwords on this site, but if you want to show your support then check out one of my other sites. <br>
-          <a href="https://pollygot.com" target="_blank" class="padded">Pollygot</a> <br>
-          <a href="https://braineebox.com" target="_blank" class="padded">BraineeBox</a><br>
-          </small>
-        </p>
+        <p><small>I don't plan to put adwords on this site, but if you want to show your support then check out one of my other sites. </small></p>
+        <ul>
+          <li><a href="https://pollygot.com" target="_blank" class="padded">Pollygot</a></li>
+          <li><a href="https://braineebox.com" target="_blank" class="padded">BraineeBox</a></li>
+        </ul>
       </md-content>
 
     </md-drawer>
@@ -58,55 +65,15 @@
 
 
       <div class="md-layout md-gutter md-alignment-center">
-        <div class="md-layout-item md-size-50 md-small-size-100" v-if="!shuffledModels.length">
-          <md-card class="md-primary empty-card">
-            <md-card-header>
-              <md-card-header-text>
-                <div class="md-title">Select some topics</div>
-              </md-card-header-text>
-            </md-card-header>
-            </md-card-header>
-            <md-card-content>
-               Select some topics in the sidebar to get started
-             </md-card-content>
-          </md-card>
-
-        </div>
-        <div class="md-layout-item md-size-50 md-small-size-100" v-if="shuffledModels.length">
-          <md-card class="md-primary"
-          v-bind:class="{
-            'show-description': showDescription,
-            'blue-card': currentModel.category === 'General Thinking Concepts',
-            'black-card': currentModel.category === 'Numeracy',
-            'purple-card': currentModel.category === 'Systems',
-            'green-card': currentModel.category === 'Physical World',
-            'orange-card': currentModel.category === 'The Biological World',
-            'pink-card': currentModel.category === 'Human Nature & Judgment',
-            'yellow-card': currentModel.category === 'Microeconomics & Strategy',
-            'red-card': currentModel.category === 'Military & War',
-          }">
-            <md-card-header>
-              <md-card-header-text>
-                <div class="md-title">{{currentModel.name}}</div>
-                <div class="md-subhead">{{currentModel.category}}</div>
-              </md-card-header-text>
-              <md-menu md-size="big" md-direction="bottom-end">
-                <md-button class="md-icon-button" @click="google(currentModel)">
-                  <img src="/static/img/google.svg" alt="G" />
-                </md-button>
-              </md-menu>
-            </md-card-header>
-            </md-card-header>
-            <md-card-content class="description">
-               {{currentModel.description}}
-             </md-card-content>
-            <md-card-actions class="actions">
-              <md-button @click="previousModel()"  class="btn-next">Back</md-button>
-              <md-button @click="nextModel()"  class="btn-next">Next</md-button>
-            </md-card-actions>
-          </md-card>
-
-          <p class="md-caption"> {{cardIndex + 1}} / {{shuffledModels.length}}</p>
+        <div class="md-layout-item md-size-50 md-small-size-100">
+          <EmptyCard  v-if="!shuffledModels.length" />
+          <ModelCard
+            v-if="shuffledModels.length"
+            :model="currentModel"
+            @onNext="nextModel"
+            @onPrevious="previousModel"
+          />
+          <p class="md-caption" v-if="shuffledModels.length"> {{cardIndex + 1}} / {{shuffledModels.length}}</p>
         </div>
 
       </div>
@@ -119,12 +86,14 @@
 
 <script>
 import { mapGetters } from 'vuex'
+import EmptyCard from './components/EmptyCard'
+import ModelCard from './components/ModelCard'
 export default {
   name: 'app',
+  components: { EmptyCard, ModelCard },
   data: () => ({
     showNavigation: false,
     showSidepanel: false,
-    showDescription: false,
     cardIndex: 0,
     categories: [
       'General Thinking Concepts',
@@ -152,19 +121,12 @@ export default {
   },
   methods: {
     showDetails () {
-      this.showDescription = true
     },
     nextModel () {
-      this.showDescription = false
       this.cardIndex = (this.cardIndex + 1) >= this.shuffledModels.length ? 0 : this.cardIndex + 1
     },
     previousModel () {
-      this.showDescription = false
       this.cardIndex = (this.cardIndex - 1) < 0 ? (this.shuffledModels.length - 1) : this.cardIndex - 1
-    },
-    google (model) {
-      let url = 'https://www.google.com/search?q=' + model.name
-      window.open(url, '_blank')
     },
     shuffle (array) {
       let currentIndex = array.length
@@ -231,52 +193,5 @@ export default {
   .md-layout, .md-content {
     padding: 16px;
   }
-  .description {
-    white-space: pre-wrap;
-  }
-  .empty-card {
-    color: #333 !important;
-  }
-  .blue-card {
-    background: #2196F3 !important;
-    color: white !important;
-  }
-  .black-card {
-    background: black !important;
-    color: white !important;
-  }
-  .purple-card {
-    background: #9C27B0 !important;
-    color: white !important;
-  }
-  .green-card {
-    background: #4CAF50 !important;
-    color: white !important;
-  }
-  .orange-card {
-    background: #FF9800 !important;
-    color: white !important;
-  }
-  .red-card {
-    background: #f44336 !important;
-    color: white !important;
-  }
-  .yellow-card {
-    background: #FFEB3B !important;
-    color: #000 !important;
-    .md-button {
-      color: #000 !important;
-    }
-  }
-  .pink-card {
-    background: #E91E63 !important;
-    color: white !important;
-  }
-  .description, .actions {
-    background: #f9f8f8 !important;
-    color: #333 !important;
-    .md-button {
-      color: #333 !important;
-    }
-  }
+
 </style>
