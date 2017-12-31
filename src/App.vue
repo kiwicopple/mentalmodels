@@ -59,6 +59,10 @@
           <li><a href="https://braineebox.com" target="_blank" class="padded">BraineeBox</a></li>
         </ul>
       </md-content>
+      <md-content>
+        <h3 class="md-caption">Source Code</h3>
+        <p><small>You can find the source code for this app on <a href="https://github.com/kiwicopple/mentalmodels" target="_blank">Github</a></small></p>
+      </md-content>
 
     </md-drawer>
 
