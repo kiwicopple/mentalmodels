@@ -58,7 +58,21 @@
 
 
       <div class="md-layout md-gutter md-alignment-center">
-        <div class="md-layout-item md-size-50 md-small-size-100">
+        <div class="md-layout-item md-size-50 md-small-size-100" v-if="!shuffledModels.length">
+          <md-card class="md-primary empty-card">
+            <md-card-header>
+              <md-card-header-text>
+                <div class="md-title">Select some topics</div>
+              </md-card-header-text>
+            </md-card-header>
+            </md-card-header>
+            <md-card-content>
+               Select some topics in the sidebar to get started
+             </md-card-content>
+          </md-card>
+
+        </div>
+        <div class="md-layout-item md-size-50 md-small-size-100" v-if="shuffledModels.length">
           <md-card class="md-primary"
           v-bind:class="{
             'show-description': showDescription,
@@ -219,6 +233,9 @@ export default {
   }
   .description {
     white-space: pre-wrap;
+  }
+  .empty-card {
+    color: #333 !important;
   }
   .blue-card {
     background: #2196F3 !important;

@@ -1,8 +1,14 @@
-# mentalmodels
+# Mental Models
 
-> Flash cards of mental models
+#### [Demo - https://mentalmodels.co](https://mentalmodels.co)
 
-## Build Setup
+Mental models are "core concepts". They unchanging fundamentals for a particular subject.
+
+Learning these concepts will give you a better comprehension of the world and help you make rational decisions.
+
+This app is a shuffled list of 113 mental models, grouped into 8 color-coded categories.
+
+## Development
 
 ``` bash
 # install dependencies
@@ -27,4 +33,8 @@ npm run e2e
 npm test
 ```
 
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+## Deployment
+
+`git push -u github master && git push -u origin master`
+
+Credit to Netlify for an amazing platform.  
