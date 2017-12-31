@@ -26,7 +26,7 @@
 
       <md-list>
         <md-subheader>Filter Topics</md-subheader>
-
+        <md-list-item @click="toggleAllCategories">Toggle All</md-list-item>
         <md-list-item v-for="(c, index) in categoryList" :key="index">
           <md-checkbox v-model="categories" :value="c" class="md-accent" />
           <span class="md-list-item-text">{{c}} ({{categoryCount(c)}})</span>
@@ -70,7 +70,7 @@
 
       <div class="md-layout md-gutter md-alignment-center">
         <div class="md-layout-item md-size-50 md-small-size-100">
-          <EmptyCard  v-if="!shuffledModels.length" />
+          <EmptyCard v-if="!shuffledModels.length" />
           <ModelCard
             v-if="shuffledModels.length"
             :model="currentModel"
@@ -151,6 +151,9 @@ export default {
         array[randomIndex] = temporaryValue
       }
       return array
+    },
+    toggleAllCategories () {
+      this.categories = (this.categories.length === this.categoryList.length) ? [] : this.categoryList.slice(0)
     }
   }
 }
