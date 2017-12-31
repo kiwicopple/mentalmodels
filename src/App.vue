@@ -27,16 +27,16 @@
       <md-list>
         <md-subheader>Filter Topics</md-subheader>
 
-        <md-list-item v-for="c in categoryList">
+        <md-list-item v-for="(c, index) in categoryList" :key="index">
           <md-checkbox v-model="categories" :value="c" class="md-accent" />
-          <span class="md-list-item-text">{{c}}</span>
+          <span class="md-list-item-text">{{c}} ({{categoryCount(c)}})</span>
         </md-list-item>
       </md-list>
 
       <md-content>
         <h3 class="md-caption">About</h3>
         <p>Mental models are "core concepts". They unchanging fundamentals for a particular subject.<br> Learning these concepts will give you a better comprehension of the world and help you make rational decisions.</p>
-        <p>This app is a shuffled list of 113 mental models, grouped into 8 color-coded categories.</p>
+        <p>This app is a shuffled list of {{modelList.length}} mental models, grouped into {{categoryList.length}} color-coded categories.</p>
         <p>Try to do a few each day. Spaced repetition will help you remember. If you are using a mobile you can add this page to your homescreen and use it offline.</p>
       </md-content>
 
@@ -96,6 +96,7 @@ export default {
     showSidepanel: false,
     cardIndex: 0,
     categories: [
+      'Logical Fallacies',
       'General Thinking Concepts',
       'Numeracy',
       'Systems',
@@ -120,7 +121,8 @@ export default {
     }
   },
   methods: {
-    showDetails () {
+    categoryCount (categoryName) {
+      return this.modelList.filter(c => c.category === categoryName).length
     },
     nextModel () {
       this.cardIndex = (this.cardIndex + 1) >= this.shuffledModels.length ? 0 : this.cardIndex + 1

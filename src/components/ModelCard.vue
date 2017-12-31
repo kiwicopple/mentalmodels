@@ -1,6 +1,7 @@
 <template>
   <md-card class="md-primary"
     v-bind:class="{
+      'cyan-card': model.category === 'Logical Fallacies',
       'blue-card': model.category === 'General Thinking Concepts',
       'black-card': model.category === 'Numeracy',
       'purple-card': model.category === 'Systems',
@@ -57,6 +58,10 @@ export default {
 }
 .empty-card {
   color: #333 !important;
+}
+.cyan-card {
+  background: #00BCD4 !important;
+  color: white !important;
 }
 .blue-card {
   background: #2196F3 !important;
