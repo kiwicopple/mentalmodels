@@ -1,5 +1,5 @@
 <template>
-  <form action="" name="suggestion" netlify>
+  <form action="https://formspree.io/pcopplestone@gmail.com" method="POST">
     <md-field>
       <label>Suggest an improved description</label>
       <md-textarea v-model="suggestion" name="suggestion"></md-textarea>
