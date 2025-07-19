@@ -45,14 +45,6 @@
 
       </md-content>
       <md-content>
-        <h3 class="md-caption">Support</h3>
-        <p><small>I don't plan to put adwords on this site, but if you want to show your support then check out one of my other sites. </small></p>
-        <ul>
-          <li><a href="https://pollygot.com" target="_blank" class="padded">Pollygot</a></li>
-          <li><a href="https://braineebox.com" target="_blank" class="padded">BraineeBox</a></li>
-        </ul>
-      </md-content>
-      <md-content>
         <h3 class="md-caption">Source Code</h3>
         <p><small>You can find the source code for this app on <a href="https://github.com/kiwicopple/mentalmodels" target="_blank">Github</a></small></p>
       </md-content>
