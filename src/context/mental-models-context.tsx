@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
 import { MentalModel, CategoryName, CATEGORIES } from '../types/mental-models';
 import { allMentalModels } from '../data';
 
@@ -18,11 +18,20 @@ interface MentalModelsContextType {
 
 const MentalModelsContext = createContext<MentalModelsContextType | undefined>(undefined);
 
-// Fisher-Yates shuffle algorithm
-function shuffle<T>(array: T[]): T[] {
+// Seeded random number generator for deterministic shuffling
+function seededRandom(seed: number) {
+  let x = Math.sin(seed) * 10000;
+  return x - Math.floor(x);
+}
+
+// Fisher-Yates shuffle algorithm with seed
+function shuffle<T>(array: T[], seed: number = 12345): T[] {
   const shuffled = [...array];
+  let currentSeed = seed;
+  
   for (let i = shuffled.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
+    currentSeed++;
+    const j = Math.floor(seededRandom(currentSeed) * (i + 1));
     [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
   }
   return shuffled;
@@ -31,13 +40,21 @@ function shuffle<T>(array: T[]): T[] {
 export function MentalModelsProvider({ children }: { children: ReactNode }) {
   const [cardIndex, setCardIndex] = useState(0);
   const [selectedCategories, setSelectedCategories] = useState<CategoryName[]>(CATEGORIES);
+  const [isHydrated, setIsHydrated] = useState(false);
+  
+  // Use effect to handle hydration
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
   
   // Filter and shuffle models based on selected categories
   const shuffledModels = React.useMemo(() => {
     const filtered = allMentalModels.filter(model => 
       selectedCategories.includes(model.category as CategoryName)
     );
-    return shuffle(filtered);
+    // Use a deterministic seed based on the categories
+    const seed = selectedCategories.reduce((acc, cat) => acc + cat.charCodeAt(0), 0);
+    return shuffle(filtered, seed);
   }, [selectedCategories]);
 
   const currentModel = shuffledModels[cardIndex] || null;
