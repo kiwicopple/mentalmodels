@@ -1,23 +1,22 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
-import App from './App'
+import { createApp } from 'vue'
+import { Quasar } from 'quasar'
+import App from './App.vue'
 import router from './router'
-import store from './store'
+import { createPinia } from 'pinia'
 
-import VueMaterial from 'vue-material'
-import 'vue-material/dist/vue-material.min.css'
-import 'vue-material/dist/theme/default.css'
+// Import icon libraries
+import '@quasar/extras/material-icons/material-icons.css'
 
-Vue.use(VueMaterial)
+// Import Quasar css
+import 'quasar/src/css/index.sass'
 
-Vue.config.productionTip = false
+const app = createApp(App)
 
-/* eslint-disable no-new */
-new Vue({
-  el: '#app',
-  router,
-  store,
-  template: '<App/>',
-  components: { App }
+app.use(Quasar, {
+  plugins: {}, // import Quasar plugins and add here
 })
+
+app.use(createPinia())
+app.use(router)
+
+app.mount('#app')

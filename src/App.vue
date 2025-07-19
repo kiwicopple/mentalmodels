@@ -1,71 +1,144 @@
 <template>
-  <div class="page-container md-layout-column">
-    <md-toolbar  md-elevation="0">
-      <md-button class="md-icon-button" @click="showNavigation = true">
-        <img src="/static/img/icons/icon-128x128.png" />
-      </md-button>
-    </md-toolbar>
+  <q-layout view="lHh Lpr lFf">
+    <q-header elevated>
+      <q-toolbar>
+        <q-btn flat dense round icon="menu" aria-label="Menu" @click="toggleLeftDrawer" />
+        <q-avatar>
+          <img src="/img/icons/icon-128x128.png" />
+        </q-avatar>
+        <q-toolbar-title>
+          Mental Models
+        </q-toolbar-title>
+      </q-toolbar>
+    </q-header>
 
-    <md-drawer :md-active.sync="showNavigation" class="sidebar">
+    <q-drawer
+      v-model="leftDrawerOpen"
+      show-if-above
+      bordered
+      class="bg-grey-1"
+      :width="300"
+    >
+      <q-scroll-area class="fit">
+        <q-list>
+          <q-item-label header class="text-grey-8">
+            <q-btn flat dense round icon="close" @click="leftDrawerOpen = false" class="float-right" />
+          </q-item-label>
+          
+          <q-item class="q-mt-md">
+            <q-item-section avatar>
+              <q-avatar>
+                <img src="/img/mm-logo.svg" class="main-logo" />
+              </q-avatar>
+            </q-item-section>
+          </q-item>
 
-      <div class="close-sidebar">
-        <md-button class="md-icon-button" @click="() => {showNavigation = false}">
-          <img src="/static/img/x.svg" alt="X" />
-        </md-button>
-      </div>
-      <md-content>
-        <img src="/static/img/mm-logo.svg" class="main-logo" />
-      </md-content>
+          <q-separator class="q-my-md" />
 
-      <md-list>
-        <md-subheader>Filter Topics</md-subheader>
-        <md-list-item @click="toggleSelectedCategories">Toggle All</md-list-item>
-        <md-list-item v-for="(c, index) in categoryList" :key="index">
-          <md-checkbox :value="c" class="md-accent selected" v-model="categories" />
-          <span class="md-list-item-text">{{c}} ({{categoryCount(c)}})</span>
-        </md-list-item>
-      </md-list>
+          <q-item-label header class="text-grey-8">
+            Filter Topics
+          </q-item-label>
 
-      <md-content>
-        <h3 class="md-caption">About</h3>
-        <p>Mental models are "core concepts". They unchanging fundamentals for a particular subject.<br> Learning these concepts will give you a better comprehension of the world and help you make rational decisions.</p>
-        <p>This app is a shuffled list of {{modelList.length}} mental models, grouped into {{categoryList.length}} color-coded categories.</p>
-        <p>Try to do a few each day. Spaced repetition will help you remember. If you are using a mobile you can add this page to your homescreen and use it offline.</p>
-      </md-content>
+          <q-item clickable @click="toggleSelectedCategories">
+            <q-item-section>
+              <q-item-label>Toggle All</q-item-label>
+            </q-item-section>
+          </q-item>
 
-      <md-content>
-        <h3 class="md-caption">Acknowledgements</h3>
-        <p>
-          <small>Credit for models</small>
-        </p>
-        <ul>
-          <li><a href="https://www.farnamstreetblog.com/mental-models/" target="_blank">Farnam Street</a></li>
-          <li><a href="https://yourlogicalfallacyis.com" target="_blank">Your Logical Fallacy Is</a></li>
-        </ul>
+          <q-item v-for="(category, index) in categoryList" :key="index">
+            <q-item-section side>
+              <q-checkbox 
+                v-model="selectedCategories" 
+                :val="category" 
+                color="primary"
+              />
+            </q-item-section>
+            <q-item-section>
+              <q-item-label>{{ category }} ({{ categoryCount(category) }})</q-item-label>
+            </q-item-section>
+          </q-item>
 
-      </md-content>
-      <md-content>
-        <h3 class="md-caption">Source Code</h3>
-        <p><small>You can find the source code for this app on <a href="https://github.com/kiwicopple/mentalmodels" target="_blank">Github</a></small></p>
-      </md-content>
+          <q-separator class="q-my-md" />
 
-    </md-drawer>
+          <q-item-label header class="text-grey-8">
+            About
+          </q-item-label>
+          
+          <q-item>
+            <q-item-section>
+              <q-item-label class="text-caption">
+                Mental models are "core concepts". They unchanging fundamentals for a particular subject.
+                Learning these concepts will give you a better comprehension of the world and help you make rational decisions.
+              </q-item-label>
+              <q-item-label class="text-caption q-mt-sm">
+                This app is a shuffled list of {{ modelList.length }} mental models, grouped into {{ categoryList.length }} color-coded categories.
+              </q-item-label>
+              <q-item-label class="text-caption q-mt-sm">
+                Try to do a few each day. Spaced repetition will help you remember. If you are using a mobile you can add this page to your homescreen and use it offline.
+              </q-item-label>
+            </q-item-section>
+          </q-item>
 
+          <q-separator class="q-my-md" />
 
-    <router-view></router-view>
+          <q-item-label header class="text-grey-8">
+            Acknowledgements
+          </q-item-label>
+          
+          <q-item>
+            <q-item-section>
+              <q-item-label class="text-caption">Credit for models</q-item-label>
+              <q-list dense>
+                <q-item dense>
+                  <q-item-section>
+                    <a href="https://www.farnamstreetblog.com/mental-models/" target="_blank" class="text-primary">Farnam Street</a>
+                  </q-item-section>
+                </q-item>
+                <q-item dense>
+                  <q-item-section>
+                    <a href="https://yourlogicalfallacyis.com" target="_blank" class="text-primary">Your Logical Fallacy Is</a>
+                  </q-item-section>
+                </q-item>
+              </q-list>
+            </q-item-section>
+          </q-item>
 
+          <q-separator class="q-my-md" />
 
-  </div>
+          <q-item-label header class="text-grey-8">
+            Source Code
+          </q-item-label>
+          
+          <q-item>
+            <q-item-section>
+              <q-item-label class="text-caption">
+                You can find the source code for this app on 
+                <a href="https://github.com/kiwicopple/mentalmodels" target="_blank" class="text-primary">Github</a>
+              </q-item-label>
+            </q-item-section>
+          </q-item>
+
+        </q-list>
+      </q-scroll-area>
+    </q-drawer>
+
+    <q-page-container>
+      <router-view />
+    </q-page-container>
+  </q-layout>
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
+import { ref, computed, watch } from 'vue'
+import { useModelsStore } from './store'
+
 export default {
-  name: 'app',
-  data: () => ({
-    showNavigation: false,
-    showSidepanel: false,
-    categories: [
+  name: 'App',
+  setup() {
+    const store = useModelsStore()
+    const leftDrawerOpen = ref(false)
+    
+    const selectedCategories = ref([
       'Logical Fallacies',
       'General Thinking Concepts',
       'Numeracy',
@@ -75,92 +148,57 @@ export default {
       'Human Nature & Judgment',
       'Microeconomics & Strategy',
       'Military & War'
-    ]
-  }),
-  watch: {
-    categories: function () {
-      console.log('this.categories', this.categories)
-      this.$store.commit('SET_SELECTED_CATEGORIES', this.categories)
-    }
-  },
-  computed: {
-    ...mapGetters([
-      'modelList',
-      'categoryList',
-      'selectedCategories'
     ])
-  },
-  methods: {
-    categoryCount (categoryName) {
-      return this.modelList.filter(c => c.category === categoryName).length
-    },
-    shuffle (array) {
-      let currentIndex = array.length
-      let temporaryValue
-      let randomIndex
 
-      // While there remain elements to shuffle...
-      while (currentIndex !== 0) {
-        // Pick a remaining element...
-        randomIndex = Math.floor(Math.random() * currentIndex)
-        currentIndex -= 1
+    const categoryList = computed(() => store.categoryList)
+    const modelList = computed(() => store.modelList)
 
-        // And swap it with the current element.
-        temporaryValue = array[currentIndex]
-        array[currentIndex] = array[randomIndex]
-        array[randomIndex] = temporaryValue
-      }
-      return array
-    },
-    toggleSelectedCategories () {
-      this.categories = (this.selectedCategories.length === this.categoryList.length) ? [] : this.categoryList.slice(0)
+    watch(selectedCategories, (newCategories) => {
+      store.setSelectedCategories(newCategories)
+    }, { deep: true })
+
+    const toggleLeftDrawer = () => {
+      leftDrawerOpen.value = !leftDrawerOpen.value
+    }
+
+    const categoryCount = (categoryName) => {
+      return modelList.value.filter(c => c.category === categoryName).length
+    }
+
+    const toggleSelectedCategories = () => {
+      selectedCategories.value = selectedCategories.value.length === categoryList.value.length 
+        ? [] 
+        : [...categoryList.value]
+    }
+
+    return {
+      leftDrawerOpen,
+      selectedCategories,
+      categoryList,
+      modelList,
+      toggleLeftDrawer,
+      categoryCount,
+      toggleSelectedCategories
     }
   }
 }
 </script>
 
 <style lang="scss">
-  @import "~vue-material/dist/theme/engine"; // Import the theme engine
-  @include md-register-theme("default", (
-    primary: rgba(0,0,0,0.1), // The primary color of your application
-    accent: md-get-palette-color(red, A200) // The accent and secondary color
-  ));
-  @import "~vue-material/dist/theme/all"; // Apply the theme
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+  max-width: 100%;
+}
 
-  #overide-bg-white {
-    background: #ffffff !important;
-    background-color: #ffffff !important;
-  }
-  html, body {
-    overflow-x: hidden;
-    width: 100%;
-    max-width: 100%;
-  }
-  .main-logo {
-    width: 50%;
-    max-width: 200px;
-    display: block;
-    margin: 0;
-  }
+.main-logo {
+  width: 100%;
+  max-width: 120px;
+  display: block;
+  margin: 0;
+}
 
-  .md-drawer {
-    width: 80%;
-    max-width: 450px;
-
-    a {
-      color: #4E74FF !important;
-      &.padded {
-        display: inline-block;
-        margin: 10px 0 0 0;
-      }
-    }
-  }
-  .close-sidebar {
-    text-align: right;
-  }
-
-  .md-layout, .md-content {
-    padding: 16px;
-  }
-
+a {
+  text-decoration: none;
+}
 </style>
