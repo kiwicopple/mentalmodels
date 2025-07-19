@@ -1,61 +1,69 @@
 <template>
-  <div class="md-layout md-gutter md-alignment-center">
-    <div class="md-layout-item md-size-50 md-small-size-100">
+  <q-page class="flex flex-center">
+    <div class="column items-center q-pa-md" style="max-width: 600px; width: 100%;">
       <EmptyCard v-if="!shuffledModels.length" />
-      <p class="md-caption" v-if="shuffledModels.length"> {{cardIndex + 1}} / {{shuffledModels.length}}</p>
-      <ModelCard
-        v-if="shuffledModels.length"
-        :model="currentModel"
-        @onNext="nextModel"
-        @onPrevious="previousModel"
-      />
-      <Form :model="currentModel" v-if="shuffledModels.length" />
+      
+      <template v-if="shuffledModels.length">
+        <div class="text-caption text-grey-6 q-mb-md">
+          {{ cardIndex + 1 }} / {{ shuffledModels.length }}
+        </div>
+        
+        <ModelCard
+          :model="currentModel"
+          @onNext="nextModel"
+          @onPrevious="previousModel"
+          class="q-mb-md"
+        />
+        
+        <Form :model="currentModel" />
+      </template>
     </div>
-
-  </div>
+  </q-page>
 </template>
 
-
 <script>
-import { mapGetters } from 'vuex'
-import EmptyCard from './EmptyCard'
-import ModelCard from './ModelCard'
-import Form from './Form'
+import { computed } from 'vue'
+import { useModelsStore } from '../store'
+import EmptyCard from './EmptyCard.vue'
+import ModelCard from './ModelCard.vue'
+import Form from './Form.vue'
+
 export default {
-  name: 'app',
-  props: ['category', 'model'],
+  name: 'Models',
   components: { EmptyCard, ModelCard, Form },
-  mounted: () => {
-    // console.log('this.category', this.$route.params.category)
-  },
-  data: () => ({ }),
-  computed: {
-    ...mapGetters([
-      'categoryCount',
-      'categoryList',
-      'cardIndex',
-      'modelList',
-      'selectedCategories'
-    ]),
-    shuffledModels: function () {
-      let filtered = this.modelList.filter(m => this.selectedCategories.includes(m.category))
-      return this.shuffle(filtered)
-    },
-    currentModel: function () {
-      return this.shuffledModels[this.cardIndex]
+  setup() {
+    const store = useModelsStore()
+    
+    const shuffledModels = computed(() => {
+      const filtered = store.modelList.filter(m => 
+        store.selectedCategories.includes(m.category)
+      )
+      return shuffle(filtered)
+    })
+    
+    const currentModel = computed(() => {
+      return shuffledModels.value[store.cardIndex]
+    })
+    
+    const cardIndex = computed(() => store.cardIndex)
+    
+    const nextModel = () => {
+      const i = (store.cardIndex + 1) >= shuffledModels.value.length 
+        ? 0 
+        : store.cardIndex + 1
+      store.setCardIndex(i)
     }
-  },
-  methods: {
-    nextModel () {
-      let i = (this.cardIndex + 1) >= this.shuffledModels.length ? 0 : this.cardIndex + 1
-      this.$store.commit('SET_CARD_INDEX', i)
-    },
-    previousModel () {
-      let i = (this.cardIndex - 1) < 0 ? (this.shuffledModels.length - 1) : this.cardIndex - 1
-      this.$store.commit('SET_CARD_INDEX', i)
-    },
-    shuffle (array) {
-      let currentIndex = array.length
+    
+    const previousModel = () => {
+      const i = (store.cardIndex - 1) < 0 
+        ? (shuffledModels.value.length - 1) 
+        : store.cardIndex - 1
+      store.setCardIndex(i)
+    }
+    
+    const shuffle = (array) => {
+      const shuffled = [...array]
+      let currentIndex = shuffled.length
       let temporaryValue
       let randomIndex
 
@@ -66,11 +74,19 @@ export default {
         currentIndex -= 1
 
         // And swap it with the current element.
-        temporaryValue = array[currentIndex]
-        array[currentIndex] = array[randomIndex]
-        array[randomIndex] = temporaryValue
+        temporaryValue = shuffled[currentIndex]
+        shuffled[currentIndex] = shuffled[randomIndex]
+        shuffled[randomIndex] = temporaryValue
       }
-      return array
+      return shuffled
+    }
+    
+    return {
+      shuffledModels,
+      currentModel,
+      cardIndex,
+      nextModel,
+      previousModel
     }
   }
 }

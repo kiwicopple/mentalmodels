@@ -6,7 +6,15 @@ Mental models are "core concepts". They unchanging fundamentals for a particular
 
 Learning these concepts will give you a better comprehension of the world and help you make rational decisions.
 
-This app is a shuffled list of 113 mental models, grouped into 8 color-coded categories.
+This app is a shuffled list of mental models, grouped into color-coded categories.
+
+## Tech Stack
+
+- **Vue 3** - Modern Vue.js with Composition API
+- **Vite** - Fast build tool and dev server
+- **Quasar** - Vue UI component library
+- **Pinia** - State management
+- **Vue Router 4** - Client-side routing
 
 ## Development
 
@@ -20,21 +28,22 @@ npm run dev
 # build for production with minification
 npm run build
 
-# build for production and view the bundle analyzer report
-npm run build --report
+# preview production build
+npm run preview
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
+# lint and fix code
+npm run lint
 ```
+
+## Requirements
+
+- **Node.js** >= 18.0.0
+- **npm** >= 8.0.0
 
 ## Deployment
 
-`git push -u github master && git push -u origin master`
+The site is optimized for modern deployment platforms like Netlify, Vercel, or any static hosting service.
 
-Credit to Netlify for an amazing platform.  
+Simply run `npm run build` and deploy the `dist` folder.
+
+Credit to Netlify for an amazing platform.
