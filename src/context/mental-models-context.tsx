@@ -1,6 +1,6 @@
 'use client';
 
-import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import React, { createContext, useContext, useState, ReactNode } from 'react';
 import { MentalModel, CategoryName, CATEGORIES } from '../types/mental-models';
 import { allMentalModels } from '../data';
 
@@ -20,7 +20,7 @@ const MentalModelsContext = createContext<MentalModelsContextType | undefined>(u
 
 // Seeded random number generator for deterministic shuffling
 function seededRandom(seed: number) {
-  let x = Math.sin(seed) * 10000;
+  const x = Math.sin(seed) * 10000;
   return x - Math.floor(x);
 }
 
@@ -40,12 +40,6 @@ function shuffle<T>(array: T[], seed: number = 12345): T[] {
 export function MentalModelsProvider({ children }: { children: ReactNode }) {
   const [cardIndex, setCardIndex] = useState(0);
   const [selectedCategories, setSelectedCategories] = useState<CategoryName[]>(CATEGORIES);
-  const [isHydrated, setIsHydrated] = useState(false);
-  
-  // Use effect to handle hydration
-  useEffect(() => {
-    setIsHydrated(true);
-  }, []);
   
   // Filter and shuffle models based on selected categories
   const shuffledModels = React.useMemo(() => {
