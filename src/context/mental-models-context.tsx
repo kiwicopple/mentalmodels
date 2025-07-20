@@ -1,6 +1,7 @@
 'use client';
 
-import React, { createContext, useContext, useState, ReactNode } from 'react';
+import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
+import { useRouter, usePathname } from 'next/navigation';
 import { MentalModel, CategoryName, CATEGORIES } from '../types/mental-models';
 import { allMentalModels } from '../data';
 
@@ -38,6 +39,8 @@ function shuffle<T>(array: T[], seed: number = 12345): T[] {
 }
 
 export function MentalModelsProvider({ children }: { children: ReactNode }) {
+  const router = useRouter();
+  const pathname = usePathname();
   const [cardIndex, setCardIndex] = useState(0);
   const [selectedCategories, setSelectedCategories] = useState<CategoryName[]>(CATEGORIES);
   
@@ -51,16 +54,37 @@ export function MentalModelsProvider({ children }: { children: ReactNode }) {
     return shuffle(filtered, seed);
   }, [selectedCategories]);
 
+  // Sync cardIndex with URL
+  useEffect(() => {
+    // Parse URL to get current model
+    const pathParts = pathname.split('/');
+    if (pathParts.length === 3) {
+      const [, author, slug] = pathParts;
+      const modelIndex = shuffledModels.findIndex(
+        model => model.author === author && model.slug === slug
+      );
+      if (modelIndex !== -1 && modelIndex !== cardIndex) {
+        setCardIndex(modelIndex);
+      }
+    }
+  }, [pathname, shuffledModels, cardIndex]);
+
   const currentModel = shuffledModels[cardIndex] || null;
 
   const nextModel = () => {
     const nextIndex = (cardIndex + 1) >= shuffledModels.length ? 0 : cardIndex + 1;
-    setCardIndex(nextIndex);
+    const nextModelData = shuffledModels[nextIndex];
+    if (nextModelData) {
+      router.push(`/${nextModelData.author}/${nextModelData.slug}`);
+    }
   };
 
   const previousModel = () => {
     const prevIndex = (cardIndex - 1) < 0 ? (shuffledModels.length - 1) : cardIndex - 1;
-    setCardIndex(prevIndex);
+    const prevModelData = shuffledModels[prevIndex];
+    if (prevModelData) {
+      router.push(`/${prevModelData.author}/${prevModelData.slug}`);
+    }
   };
 
   const value: MentalModelsContextType = {

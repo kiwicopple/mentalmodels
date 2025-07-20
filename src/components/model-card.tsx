@@ -3,8 +3,7 @@
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { MentalModel } from '../types/mental-models';
-import { Search, ExternalLink } from 'lucide-react';
-import Link from 'next/link';
+import { Search } from 'lucide-react';
 
 interface ModelCardProps {
   model: MentalModel;
@@ -51,14 +50,6 @@ export function ModelCard({ model }: ModelCardProps) {
       <CardContent className="space-y-4">
         <div className="text-sm leading-relaxed whitespace-pre-line">
           {model.description}
-        </div>
-        <div className="pt-4">
-          <Button asChild variant="outline" className="w-full">
-            <Link href={`/${model.author}/${model.slug}`}>
-              <ExternalLink className="h-4 w-4 mr-2" />
-              View Details
-            </Link>
-          </Button>
         </div>
       </CardContent>
     </Card>
