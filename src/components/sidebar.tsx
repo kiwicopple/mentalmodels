@@ -5,7 +5,6 @@ import { CategoryName, CATEGORIES } from "../types/mental-models";
 import { Button } from "./ui/button";
 import { Checkbox } from "./ui/checkbox";
 import { X } from "lucide-react";
-import Image from "next/image";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -60,24 +59,10 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
             </Button>
           </div>
 
-          {/* Logo */}
-          <div>
-            <Image
-              src="/mm-logo.svg"
-              alt="Mental Models Logo"
-              width={200}
-              height={100}
-              className="w-1/2 max-w-[200px]"
-            />
-          </div>
-
           {/* Category Filter */}
           <div className="space-y-3">
-            <h3 className="text-sm font-semibold text-muted-foreground">
-              Filter Topics
-            </h3>
             <Button
-              variant="ghost"
+              variant="outline"
               className="w-full justify-start p-2 hover:bg-accent"
               onClick={toggleAll}
             >
