@@ -2,6 +2,8 @@ export interface MentalModel {
   name: string;
   category: string;
   description: string;
+  author: string;
+  slug: string;
 }
 
 export type CategoryName = 

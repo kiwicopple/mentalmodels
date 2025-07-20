@@ -3,7 +3,8 @@
 import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { MentalModel } from '../types/mental-models';
-import { Search } from 'lucide-react';
+import { Search, ExternalLink } from 'lucide-react';
+import Link from 'next/link';
 
 interface ModelCardProps {
   model: MentalModel;
@@ -57,9 +58,17 @@ export function ModelCard({ model, onNext, onPrevious }: ModelCardProps) {
           <Button onClick={onPrevious} variant="outline">
             Back
           </Button>
-          <Button onClick={onNext}>
-            Next
-          </Button>
+          <div className="flex gap-2">
+            <Button asChild variant="outline">
+              <Link href={`/${model.author}/${model.slug}`}>
+                <ExternalLink className="h-4 w-4 mr-2" />
+                View Details
+              </Link>
+            </Button>
+            <Button onClick={onNext}>
+              Next
+            </Button>
+          </div>
         </div>
       </CardContent>
     </Card>
