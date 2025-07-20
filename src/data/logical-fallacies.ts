@@ -1,5 +1,4 @@
 import { MentalModel } from "../types/mental-models";
-import { generateSlug } from "../utils/slug";
 
 export const logicalFallacies: MentalModel[] = [
   {
@@ -10,7 +9,7 @@ By exaggerating, misrepresenting, or just completely fabricating someone's argum
 
 Example: After Will said that we should put more money into health and education, Warren responded by saying that he was surprised that Will hates our country so much that he wants to leave it defenceless by cutting military spending.`,
     author: "model",
-    slug: generateSlug("Strawman"),
+    slug: 'strawman',
   },
   {
     name: "False Cause",
@@ -20,7 +19,7 @@ Many people confuse correlation (things happening together or in sequence) for c
 
 Example: Pointing to a fancy chart, Roger shows how temperatures have been rising over the past few centuries, whilst at the same time the numbers of pirates have been decreasing; thus pirates cool the world and global warming is a hoax.`,
     author: "model",
-    slug: generateSlug("False Cause"),
+    slug: 'false-cause',
   },
   {
     name: "Appeal to Emotion",
@@ -30,7 +29,7 @@ Appeals to emotion include appeals to fear, envy, hatred, pity, pride, and more.
 
 Example: Luke didn't want to eat his sheep's brains with chopped liver and brussel sprouts, but his father told him to think about the poor, starving children in a third world country who weren't fortunate enough to have any food at all.`,
     author: "model",
-    slug: generateSlug("Strawman"),
+    slug: 'strawman',
   },
   {
     name: "The Fallacy Fallacy",
@@ -40,7 +39,7 @@ It is entirely possible to make a claim that is false yet argue with logical coh
 
 Example: Recognising that Amanda had committed a fallacy in arguing that we should eat healthy food because a nutritionist said it was popular, Alyse said we should therefore eat bacon double cheeseburgers every day.`,
     author: "model",
-    slug: generateSlug("The Fallacy Fallacy"),
+    slug: 'the-fallacy-fallacy',
   },
   {
     name: "Slippery Slope",
@@ -50,7 +49,7 @@ The problem with this reasoning is that it avoids engaging with the issue at han
 
 Example: Colin Closet asserts that if we allow same-sex couples to marry, then the next thing we know we'll be allowing people to marry their parents, their cars and even monkeys.`,
     author: "model",
-    slug: generateSlug("Slippery Slope"),
+    slug: 'slippery-slope',
   },
   {
     name: "Ad Hominem",
@@ -60,7 +59,7 @@ Ad hominem attacks can take the form of overtly attacking somebody, or more subt
 
 Example: After Sally presents an eloquent and compelling case for a more equitable taxation system, Sam asks the audience whether we should believe anything from a woman who isn't married, was once arrested, and smells a bit weird.`,
     author: "model",
-    slug: generateSlug("Ad Hominem"),
+    slug: 'ad-hominem',
   },
   {
     name: "Tu Quoque",
@@ -70,7 +69,7 @@ Pronounced too-kwo-kwee. Literally translating as 'you too' this fallacy is also
 
 Example: Nicole identified that Hannah had committed a logical fallacy, but instead of addressing the substance of her claim, Hannah accused Nicole of committing a fallacy earlier on in the conversation.`,
     author: "model",
-    slug: generateSlug("Tu Quoque"),
+    slug: 'tu-quoque',
   },
   {
     name: "Personal Incredulity",
@@ -80,7 +79,7 @@ Complex subjects like biological evolution through natural selection require som
 
 Example: Kirk drew a picture of a fish and a human and with effusive disdain asked Richard if he really thought we were stupid enough to believe that a fish somehow turned into a human through just, like, random things happening over time.`,
     author: "model",
-    slug: generateSlug("Personal Incredulity"),
+    slug: 'personal-incredulity',
   },
   {
     name: "Special Pleading",
@@ -90,7 +89,7 @@ Humans are funny creatures and have a foolish aversion to being wrong. Rather th
 
 Example: Edward Johns claimed to be psychic, but when his 'abilities' were tested under proper scientific conditions, they magically disappeared. Edward explained this saying that one had to have faith in his abilities for them to work.`,
     author: "model",
-    slug: generateSlug("Special Pleading"),
+    slug: 'special-pleading',
   },
   {
     name: "Loaded Question",
@@ -100,7 +99,7 @@ Loaded question fallacies are particularly effective at derailing rational debat
 
 Example: Grace and Helen were both romantically interested in Brad. One day, with Brad sitting within earshot, Grace asked in an inquisitive tone whether Helen was still having problems with her drug habit.`,
     author: "model",
-    slug: generateSlug("Loaded Question"),
+    slug: 'loaded-question',
   },
   {
     name: "Burden of Proof",
@@ -110,7 +109,7 @@ The burden of proof lies with someone who is making a claim, and is not upon any
 
 Example: Bertrand declares that a teapot is, at this very moment, in orbit around the Sun between the Earth and Mars, and that because no one can prove him wrong, his claim is therefore a valid one.`,
     author: "model",
-    slug: generateSlug("Burden of Proof"),
+    slug: 'burden-of-proof',
   },
   {
     name: "Ambiguity",
@@ -120,7 +119,7 @@ Politicians are often guilty of using ambiguity to mislead and will later point 
 
 Example: When the judge asked the defendant why he hadn't paid his parking fines, he said that he shouldn't have to pay them because the sign said 'Fine for parking here' and so he naturally presumed that it would be fine to park there.`,
     author: "model",
-    slug: generateSlug("Ambiguity"),
+    slug: 'ambiguity',
   },
   {
     name: "The Gambler's Fallacy",
@@ -130,7 +129,7 @@ This commonly believed fallacy can be said to have helped create an entire city 
 
 Example: Red had come up six times in a row on the roulette wheel, so Greg knew that it was close to certain that black would be next up. Suffering an economic form of natural selection with this thinking, he soon lost all of his savings.`,
     author: "model",
-    slug: generateSlug("The Gambler's Fallacy"),
+    slug: 'the-gamblers-fallacy',
   },
   {
     name: "Bandwagon",
@@ -141,7 +140,7 @@ If it did, then the Earth would have made itself flat for most of history to acc
 
 Example: Shamus pointed a drunken finger at Sean and asked him to explain how so many people could believe in leprechauns if they're only a silly old superstition. Sean, however, had had a few too many Guinness himself and fell off his chair.`,
     author: "model",
-    slug: generateSlug("Bandwagon"),
+    slug: 'bandwagon',
   },
   {
     name: "Appeal to Authority",
@@ -151,7 +150,7 @@ It's important to note that this fallacy should not be used to dismiss the claim
 
 Example: Not able to defend his position that evolution 'isn't true' Bob says that he knows a scientist who also questions evolution (and presumably isn't a primate).`,
     author: "model",
-    slug: generateSlug("Appeal to Authority"),
+    slug: 'appeal-to-authority',
   },
   {
     name: "Composition/Division",
@@ -161,7 +160,7 @@ Often when something is true for the part it does also apply to the whole, or vi
 
 Example: Daniel was a precocious child and had a liking for logic. He reasoned that atoms are invisible, and that he was made of atoms and therefore invisible too. Unfortunately, despite his thinky skills, he lost the game of hide and go seek.`,
     author: "model",
-    slug: generateSlug("Composition/Division"),
+    slug: 'composition-division',
   },
   {
     name: "No True Scotsman",
@@ -171,7 +170,7 @@ In this form of faulty reasoning one's belief is rendered unfalsifiable because 
 
 Example: Angus declares that Scotsmen do not put sugar on their porridge, to which Lachlan points out that he is a Scotsman and puts sugar on his porridge. Furious, like a true Scot, Angus yells that no true Scotsman sugars his porridge.`,
     author: "model",
-    slug: generateSlug("No True Scotsman"),
+    slug: 'no-true-scotsman',
   },
   {
     name: "Genetic",
@@ -181,7 +180,7 @@ This fallacy avoids the argument by shifting focus onto something's or someone's
 
 Example: Accused on the 6 o'clock news of corruption and taking bribes, the senator said that we should all be very wary of the things we hear in the media, because we all know how very unreliable the media can be.`,
     author: "model",
-    slug: generateSlug("Genetic"),
+    slug: 'genetic',
   },
   {
     name: "Black-or-White",
@@ -191,7 +190,7 @@ Also known as the false dilemma, this insidious tactic has the appearance of for
 
 Example: Whilst rallying support for his plan to fundamentally undermine citizens' rights, the Supreme Leader told the people they were either on his side, or they were on the side of the enemy.`,
     author: "model",
-    slug: generateSlug("Black-or-White"),
+    slug: 'black-or-white',
   },
   {
     name: "Begging the Question",
@@ -201,7 +200,7 @@ This logically incoherent argument often arises in situations where people have 
 
 Example: The word of Zorbo the Great is flawless and perfect. We know this because it says so in The Great and Infallible Book of Zorbo's Best and Most Truest Things that are Definitely True and Should Not Ever Be Questioned.`,
     author: "model",
-    slug: generateSlug("Begging the Question"),
+    slug: 'begging-the-question',
   },
   {
     name: "Appeal to Nature",
@@ -211,7 +210,7 @@ Many 'natural' things are also considered 'good', and this can bias our thinking
 
 Example: The medicine man rolled into town on his bandwagon offering various natural remedies, such as very special plain water. He said that it was only natural that people should be wary of 'artificial' medicines such as antibiotics.`,
     author: "model",
-    slug: generateSlug("Appeal to Nature"),
+    slug: 'appeal-to-nature',
   },
   {
     name: "Anecdotal",
@@ -221,7 +220,7 @@ It's often much easier for people to believe someone's testimony as opposed to u
 
 Example: Jason said that that was all cool and everything, but his grandfather smoked, like, 30 cigarettes a day and lived until 97 - so don't believe everything you read about meta analyses of methodologically sound studies showing proven causal relationships.`,
     author: "model",
-    slug: generateSlug("Anecdotal"),
+    slug: 'anecdotal',
   },
   {
     name: "The Texas Sharpshooter",
@@ -231,7 +230,7 @@ This 'false cause' fallacy is coined after a marksman shooting randomly at barns
 
 Example: The makers of Sugarette Candy Drinks point to research showing that of the five countries where Sugarette drinks sell the most units, three of them are in the top ten healthiest countries on Earth, therefore Sugarette drinks are healthy.`,
     author: "model",
-    slug: generateSlug("The Texas Sharpshooter"),
+    slug: 'the-texas-sharpshooter',
   },
   {
     name: "Middle Ground",
@@ -241,6 +240,6 @@ Much of the time the truth does indeed lie between two extreme points, but this 
 
 Example: Holly said that vaccinations caused autism in children, but her scientifically well-read friend Caleb said that this claim had been debunked and proven false. Their friend Alice offered a compromise that vaccinations must cause some autism, just not all autism.`,
     author: "model",
-    slug: generateSlug("Middle Ground"),
+    slug: 'middle-ground',
   },
 ];
