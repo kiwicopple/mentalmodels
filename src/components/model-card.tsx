@@ -7,8 +7,6 @@ import { Search } from 'lucide-react';
 
 interface ModelCardProps {
   model: MentalModel;
-  onNext: () => void;
-  onPrevious: () => void;
 }
 
 // Category color mapping
@@ -27,7 +25,7 @@ const getCategoryColor = (category: string): string => {
   return colorMap[category] || 'border-gray-300 bg-gray-50';
 };
 
-export function ModelCard({ model, onNext, onPrevious }: ModelCardProps) {
+export function ModelCard({ model }: ModelCardProps) {
   const handleGoogleSearch = () => {
     const searchQuery = encodeURIComponent(model.name);
     window.open(`https://www.google.com/search?q=${searchQuery}`, '_blank');
@@ -52,14 +50,6 @@ export function ModelCard({ model, onNext, onPrevious }: ModelCardProps) {
       <CardContent className="space-y-4">
         <div className="text-sm leading-relaxed whitespace-pre-line">
           {model.description}
-        </div>
-        <div className="flex justify-between pt-4">
-          <Button onClick={onPrevious} variant="outline">
-            Back
-          </Button>
-          <Button onClick={onNext}>
-            Next
-          </Button>
         </div>
       </CardContent>
     </Card>
