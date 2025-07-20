@@ -8,8 +8,6 @@ import Link from 'next/link';
 
 interface ModelCardProps {
   model: MentalModel;
-  onNext: () => void;
-  onPrevious: () => void;
 }
 
 // Category color mapping
@@ -28,7 +26,7 @@ const getCategoryColor = (category: string): string => {
   return colorMap[category] || 'border-gray-300 bg-gray-50';
 };
 
-export function ModelCard({ model, onNext, onPrevious }: ModelCardProps) {
+export function ModelCard({ model }: ModelCardProps) {
   const handleGoogleSearch = () => {
     const searchQuery = encodeURIComponent(model.name);
     window.open(`https://www.google.com/search?q=${searchQuery}`, '_blank');
@@ -54,21 +52,13 @@ export function ModelCard({ model, onNext, onPrevious }: ModelCardProps) {
         <div className="text-sm leading-relaxed whitespace-pre-line">
           {model.description}
         </div>
-        <div className="flex justify-between pt-4">
-          <Button onClick={onPrevious} variant="outline">
-            Back
+        <div className="pt-4">
+          <Button asChild variant="outline" className="w-full">
+            <Link href={`/${model.author}/${model.slug}`}>
+              <ExternalLink className="h-4 w-4 mr-2" />
+              View Details
+            </Link>
           </Button>
-          <div className="flex gap-2">
-            <Button asChild variant="outline">
-              <Link href={`/${model.author}/${model.slug}`}>
-                <ExternalLink className="h-4 w-4 mr-2" />
-                View Details
-              </Link>
-            </Button>
-            <Button onClick={onNext}>
-              Next
-            </Button>
-          </div>
         </div>
       </CardContent>
     </Card>

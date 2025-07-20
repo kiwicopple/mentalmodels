@@ -4,6 +4,7 @@ import { useMentalModels } from '../context/mental-models-context';
 import { ModelCard } from './model-card';
 import { SuggestionForm } from './suggestion-form';
 import { Card, CardContent } from './ui/card';
+import { BottomNavigation } from './bottom-navigation';
 
 export function Models() {
   const { currentModel, nextModel, previousModel, shuffledModels, cardIndex } = useMentalModels();
@@ -21,16 +22,17 @@ export function Models() {
   }
 
   return (
-    <div className="w-full max-w-2xl mx-auto space-y-4">
-      <p className="text-sm text-muted-foreground text-center">
-        {cardIndex + 1} / {shuffledModels.length}
-      </p>
-      <ModelCard
-        model={currentModel}
+    <div className="w-full h-full flex flex-col">
+      <div className="flex-1 max-w-2xl mx-auto w-full space-y-4 px-4">
+        <ModelCard model={currentModel} />
+        <SuggestionForm model={currentModel} />
+      </div>
+      <BottomNavigation
         onNext={nextModel}
         onPrevious={previousModel}
+        currentIndex={cardIndex}
+        totalCount={shuffledModels.length}
       />
-      <SuggestionForm model={currentModel} />
     </div>
   );
 }
