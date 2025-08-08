@@ -15,7 +15,8 @@ export type CategoryName =
   | 'The Biological World'
   | 'Human Nature & Judgment'
   | 'Microeconomics & Strategy'
-  | 'Military & War';
+  | 'Military & War'
+  | 'Management';
 
 export const CATEGORIES: CategoryName[] = [
   'Logical Fallacies',
@@ -26,5 +27,6 @@ export const CATEGORIES: CategoryName[] = [
   'The Biological World',
   'Human Nature & Judgment',
   'Microeconomics & Strategy',
-  'Military & War'
+  'Military & War',
+  'Management'
 ];
