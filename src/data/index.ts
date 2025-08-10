@@ -8,6 +8,7 @@ import { numeracy } from './numeracy';
 import { physicalWorld } from './physical-world';
 import { systems } from './systems';
 import { war } from './war';
+import { management } from './management';
 
 export const allMentalModels: MentalModel[] = [
   ...logicalFallacies,
@@ -18,7 +19,8 @@ export const allMentalModels: MentalModel[] = [
   ...numeracy,
   ...physicalWorld,
   ...systems,
-  ...war
+  ...war,
+  ...management
 ];
 
 export {
@@ -30,5 +32,6 @@ export {
   numeracy,
   physicalWorld,
   systems,
-  war
+  war,
+  management
 };
