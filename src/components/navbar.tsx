@@ -1,6 +1,7 @@
 'use client';
 
 import Image from 'next/image';
+import Link from 'next/link';
 import { Button } from './ui/button';
 import { Menu } from 'lucide-react';
 
@@ -24,14 +25,16 @@ export function Navbar({ onMenuClick }: NavbarProps) {
 
         {/* Logo */}
         <div className="flex items-center space-x-3">
-          <Image
-            src="/mm-logo.svg"
-            alt="Mental Models Logo"
-            width={120}
-            height={38}
-            className="h-8 w-auto"
-            priority
-          />
+          <Link href="/" className="hover:opacity-80 transition-opacity">
+            <Image
+              src="/mm-logo.svg"
+              alt="Mental Models Logo"
+              width={120}
+              height={38}
+              className="h-8 w-auto"
+              priority
+            />
+          </Link>
         </div>
 
         {/* Spacer to push content to the right if needed */}

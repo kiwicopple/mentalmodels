@@ -29,7 +29,7 @@ Appeals to emotion include appeals to fear, envy, hatred, pity, pride, and more.
 
 Example: Luke didn't want to eat his sheep's brains with chopped liver and brussel sprouts, but his father told him to think about the poor, starving children in a third world country who weren't fortunate enough to have any food at all.`,
     author: "model",
-    slug: 'strawman',
+    slug: 'appeal-to-emotion',
   },
   {
     name: "The Fallacy Fallacy",

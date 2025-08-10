@@ -1,7 +1,7 @@
 'use client';
 
 import React, { createContext, useContext, useState, ReactNode, useEffect } from 'react';
-import { useRouter, usePathname } from 'next/navigation';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation';
 import { MentalModel, CategoryName, CATEGORIES } from '../types/mental-models';
 import { allMentalModels } from '../data';
 
@@ -11,6 +11,7 @@ interface MentalModelsContextType {
   selectedCategories: CategoryName[];
   setCardIndex: (index: number) => void;
   setSelectedCategories: (categories: CategoryName[]) => void;
+  updateCategoriesAndURL: (categories: CategoryName[]) => void;
   shuffledModels: MentalModel[];
   currentModel: MentalModel | null;
   nextModel: () => void;
@@ -41,7 +42,9 @@ function shuffle<T>(array: T[], seed: number = 12345): T[] {
 export function MentalModelsProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
+  const searchParams = useSearchParams();
   const [cardIndex, setCardIndex] = useState(0);
+  
   const [selectedCategories, setSelectedCategories] = useState<CategoryName[]>(CATEGORIES);
   
   // Filter and shuffle models based on selected categories
@@ -53,6 +56,43 @@ export function MentalModelsProvider({ children }: { children: ReactNode }) {
     const seed = selectedCategories.reduce((acc, cat) => acc + cat.charCodeAt(0), 0);
     return shuffle(filtered, seed);
   }, [selectedCategories]);
+
+  // Update URL when categories change
+  const updateCategoriesAndURL = (newCategories: CategoryName[]) => {
+    setSelectedCategories(newCategories);
+    
+    // Build URL with query params
+    const url = new URL(window.location.href);
+    url.pathname = '/';
+    
+    if (newCategories.length === CATEGORIES.length) {
+      // All categories selected - remove query params
+      url.search = '';
+    } else {
+      // Some categories selected - add query params
+      url.searchParams.set('categories', newCategories.join(','));
+    }
+    
+    // Navigate to homepage with filters (redirect if on model page)
+    router.push(url.pathname + url.search);
+  };
+
+  // Initialize categories on mount
+  useEffect(() => {
+    const categoryParams = searchParams.get('categories');
+    if (categoryParams) {
+      const parsed = categoryParams.split(',').filter(cat => 
+        CATEGORIES.includes(cat as CategoryName)
+      ) as CategoryName[];
+      if (parsed.length > 0) {
+        setSelectedCategories(parsed);
+      } else {
+        setSelectedCategories(CATEGORIES);
+      }
+    } else {
+      setSelectedCategories(CATEGORIES);
+    }
+  }, [searchParams]);
 
   // Sync cardIndex with URL
   useEffect(() => {
@@ -93,6 +133,7 @@ export function MentalModelsProvider({ children }: { children: ReactNode }) {
     selectedCategories,
     setCardIndex,
     setSelectedCategories,
+    updateCategoriesAndURL,
     shuffledModels,
     currentModel,
     nextModel,

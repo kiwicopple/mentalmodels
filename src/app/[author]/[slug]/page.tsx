@@ -1,6 +1,6 @@
 import { notFound } from 'next/navigation';
 import { allMentalModels } from '@/data';
-import HomePage from '@/app/page';
+import { ModelPageClient } from './page-client';
 
 interface PageProps {
   params: Promise<{
@@ -46,6 +46,5 @@ export default async function ModelPage({ params }: PageProps) {
     notFound();
   }
 
-  // Render the same home page but with URL context
-  return <HomePage />;
+  return <ModelPageClient />;
 }

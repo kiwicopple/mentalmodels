@@ -12,22 +12,22 @@ interface SidebarProps {
 }
 
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
-  const { selectedCategories, setSelectedCategories, models } =
+  const { selectedCategories, updateCategoriesAndURL, models } =
     useMentalModels();
 
   const handleCategoryChange = (category: CategoryName, checked: boolean) => {
     if (checked) {
-      setSelectedCategories([...selectedCategories, category]);
+      updateCategoriesAndURL([...selectedCategories, category]);
     } else {
-      setSelectedCategories(selectedCategories.filter((c) => c !== category));
+      updateCategoriesAndURL(selectedCategories.filter((c) => c !== category));
     }
   };
 
   const toggleAll = () => {
     if (selectedCategories.length === CATEGORIES.length) {
-      setSelectedCategories([]);
+      updateCategoriesAndURL([]);
     } else {
-      setSelectedCategories([...CATEGORIES]);
+      updateCategoriesAndURL([...CATEGORIES]);
     }
   };
 
@@ -47,9 +47,9 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
 
       {/* Sidebar */}
       <div
-        className={`fixed top-16 left-0 h-[calc(100vh-4rem)] w-4/5 max-w-[450px] bg-background border-r shadow-lg transform transition-transform duration-300 ease-in-out z-40 md:translate-x-0 ${
+        className={`fixed top-16 left-0 h-[calc(100vh-4rem)] w-4/5 max-w-[450px] bg-background border-r shadow-lg transform transition-transform duration-300 ease-in-out z-40 ${
           isOpen ? "translate-x-0" : "-translate-x-full"
-        } md:static md:h-[calc(100vh-4rem)] md:shadow-none md:top-0 md:w-80`}
+        } md:translate-x-0 md:w-80 md:shadow-none`}
       >
         <div className="p-6 space-y-6 h-full overflow-y-auto">
           {/* Close button */}
