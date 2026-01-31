@@ -99,4 +99,11 @@ export const numeracy: MentalModel[] = [
     author: "model",
     slug: 'order-of-magnitude',
   },
+  {
+    name: "Optimal Stopping",
+    category: "Numeracy",
+    description: `Optimal stopping theory addresses the problem of choosing the right moment to take a particular action in order to maximize reward or minimize cost. The most famous example is the "secretary problem" or "37% rule": when evaluating a series of options sequentially (like job candidates or apartments), you should spend roughly 37% of your time exploring and rejecting all options, then select the next option that exceeds all previous ones. This mathematically-derived strategy balances the trade-off between gathering more information and the risk of losing good opportunities. The principle applies broadly to decisions involving search and selection under uncertainty, from hiring to house-hunting to finding a life partner.`,
+    author: "model",
+    slug: 'optimal-stopping',
+  },
 ];
