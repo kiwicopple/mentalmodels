@@ -7,6 +7,8 @@ export const physicalWorld: MentalModel[] = [
     description: `The laws of thermodynamics describe energy in a closed system. The laws cannot be escaped and underlie the physical world. They describe a world in which useful energy is constantly being lost, and energy cannot be created or destroyed. Applying their lessons to the social world can be a profitable enterprise.`,
     author: "model",
     slug: 'laws-of-thermodynamics',
+    nameSw: "Sheria za Thermodynamics",
+    descriptionSw: `Sheria za thermodynamics zinaeleza nishati katika mfumo uliofungwa. Sheria hizi haziwezi kuepukwa na zinasisitiza ulimwengu wa kimwili. Zinaeleza ulimwengu ambapo nishati muhimu inapotea kila wakati, na nishati haiwezi kuundwa au kuharibiwa. Kutumia masomo yao kwa ulimwengu wa kijamii kunaweza kuwa juhudi yenye faida.`,
   },
   {
     name: "Reciprocity",
@@ -14,6 +16,8 @@ export const physicalWorld: MentalModel[] = [
     description: `If I push on a wall, physics tells me that the wall pushes back with equivalent force. In a biological system, if one individual acts on another, the action will tend to be reciprocated in kind. And of course, human beings act with intense reciprocity demonstrated as well.`,
     author: "model",
     slug: 'reciprocity',
+    nameSw: "Kulipiza (Reciprocity)",
+    descriptionSw: `Ikiwa ninaisukuma ukuta, fizikia inaniambia kwamba ukuta unasukuma nyuma kwa nguvu sawa. Katika mfumo wa kibayolojia, ikiwa mtu mmoja anatenda kwa mwingine, kitendo kitaelekea kulipizwa kwa namna sawa. Na bila shaka, wanadamu hutenda kwa kulipiza kwa nguvu, kama inavyoonyeshwa pia.`,
   },
   {
     name: "Velocity",
@@ -21,6 +25,8 @@ export const physicalWorld: MentalModel[] = [
     description: `Velocity is not equivalent to speed; the two are sometimes confused. Velocity is speed plus vector: how fast something gets somewhere. An object that moves two steps forward and then two steps back has moved at a certain speed but shows no velocity. The addition of the vector, that critical distinction, is what we should consider in practical life.`,
     author: "model",
     slug: 'velocity',
+    nameSw: "Mwendokasi (Velocity)",
+    descriptionSw: `Mwendokasi si sawa na kasi; hizi mbili wakati mwingine huchanganywa. Mwendokasi ni kasi pamoja na mwelekeo (vector): jinsi kitu kinavyofika mahali kwa haraka. Kitu kinachosonga hatua mbili mbele na kisha hatua mbili nyuma kimesonga kwa kasi fulani lakini hakionyeshi mwendokasi. Kuongeza kwa mwelekeo, tofauti hiyo muhimu, ndicho tunachopaswa kuzingatia katika maisha ya kivitendo.`,
   },
   {
     name: "Relativity",
@@ -28,6 +34,8 @@ export const physicalWorld: MentalModel[] = [
     description: `Relativity has been used in several contexts in the world of physics, but the important aspect to study is the idea that an observer cannot truly understand a system of which he himself is a part. For example, a man inside an airplane does not feel like he is experiencing movement, but an outside observer can see that movement is occurring. This form of relativity tends to affect social systems in a similar way.`,
     author: "model",
     slug: 'relativity',
+    nameSw: "Uhusiano wa Mtazamo (Relativity)",
+    descriptionSw: `Relativity imetumika katika miktadha kadhaa katika ulimwengu wa fizikia, lakini kipengele muhimu cha kusoma ni wazo kwamba mtazamaji hawezi kuelewa kweli mfumo ambao yeye mwenyewe ni sehemu yake. Kwa mfano, mtu ndani ya ndege hahisi kama anasafiri, lakini mtazamaji wa nje anaweza kuona kwamba mwendo unatokea. Aina hii ya relativity huelekea kuathiri mifumo ya kijamii kwa namna sawa.`,
   },
   {
     name: "Activation Energy",
@@ -35,6 +43,8 @@ export const physicalWorld: MentalModel[] = [
     description: `A fire is not much more than a combination of carbon and oxygen, but the forests and coal mines of the world are not combusting at will because such a chemical reaction requires the input of a critical level of "activation energy" in order to get a reaction started. Two combustible elements alone are not enough.`,
     author: "model",
     slug: 'activation-energy',
+    nameSw: "Nishati ya Kuanzisha (Activation Energy)",
+    descriptionSw: `Moto si kitu kingine zaidi ya mchanganyiko wa kaboni na oksijeni, lakini misitu na migodi ya makaa ya mawe ya dunia haiwaki kwa hiari kwa sababu mmenyuko huo wa kemikali unahitaji kuingiza kiwango muhimu cha "nishati ya kuanzisha" ili kuanza mmenyuko. Vipengele viwili vinavyoweza kuwaka peke yao havitoshi.`,
   },
   {
     name: "Catalysts",
@@ -42,6 +52,8 @@ export const physicalWorld: MentalModel[] = [
     description: `A catalyst either kick-starts or maintains a chemical reaction, but isn't itself a reactant. The reaction may slow or stop without the addition of catalysts. Social systems, of course, take on many similar traits, and we can view catalysts in a similar light.`,
     author: "model",
     slug: 'catalysts',
+    nameSw: "Vichocheo (Catalysts)",
+    descriptionSw: `Kichocheo (catalyst) ama huanzisha au kudumisha mmenyuko wa kemikali, lakini yenyewe si kiathirika. Mmenyuko unaweza kupungua au kusimama bila kuongezwa kwa vichocheo. Mifumo ya kijamii, bila shaka, ina sifa nyingi zinazofanana, na tunaweza kuona vichocheo kwa namna sawa.`,
   },
   {
     name: "Leverage",
@@ -49,6 +61,8 @@ export const physicalWorld: MentalModel[] = [
     description: `Most of the engineering marvels of the world have been accomplished with applied leverage. As famously stated by Archimedes, "Give me a lever long enough and I shall move the world." With a small amount of input force, we can make a great output force through leverage. Understanding where we can apply this model to the human world can be a source of great success.`,
     author: "model",
     slug: 'leverage',
+    nameSw: "Nguvu ya Upandishaji (Leverage)",
+    descriptionSw: `Maajabu mengi ya uhandisi wa dunia yamefanyika kwa kutumia nguvu ya upandishaji. Kama Archimedes alivyosema maarufu, "Nipe kipandishio kirefu cha kutosha na nitausogeza ulimwengu." Kwa kiasi kidogo cha nguvu ya kuingiza, tunaweza kufanya nguvu kubwa ya kutoa kupitia upandishaji. Kuelewa wapi tunaweza kutumia mfano huu kwa ulimwengu wa binadamu kunaweza kuwa chanzo cha mafanikio makubwa.`,
   },
   {
     name: "Inertia",
@@ -56,6 +70,8 @@ export const physicalWorld: MentalModel[] = [
     description: `An object in motion with a certain vector wants to continue moving in that direction unless acted upon. This is a fundamental physical principle of motion; however, individuals, systems, and organizations display the same effect. It allows them to minimize the use of energy, but can cause them to be destroyed or eroded.`,
     author: "model",
     slug: 'inertia',
+    nameSw: "Hali ya Kukaa (Inertia)",
+    descriptionSw: `Kitu kinachosonga kwa mwelekeo fulani kinataka kuendelea kusonga katika mwelekeo huo isipokuwa kiathiriwe. Hili ni kanuni ya msingi ya kimwili ya mwendo; hata hivyo, watu binafsi, mifumo, na mashirika huonyesha athari ile ile. Inawaruhusu kupunguza matumizi ya nishati, lakini inaweza kusababisha kuharibiwa au kumomonywa.`,
   },
   {
     name: "Alloying",
@@ -63,5 +79,7 @@ export const physicalWorld: MentalModel[] = [
     description: `When we combine various elements, we create new substances. This is no great surprise, but what can be surprising in the alloying process is that 2+2 can equal not 4 but 6 – the alloy can be far stronger than the simple addition of the underlying elements would lead us to believe. This process leads us to engineering great physical objects, but we understand many intangibles in the same way; a combination of the right elements in social systems or even individuals can create a 2+2=6 effect similar to alloying.`,
     author: "model",
     slug: 'alloying',
+    nameSw: "Kuchanganya Metali (Alloying)",
+    descriptionSw: `Tunapochanganya vipengele mbalimbali, tunaunda vitu vipya. Hili si la kushangaza sana, lakini kinachoweza kushangaza katika mchakato wa kuchanganya metali ni kwamba 2+2 inaweza kuwa si 4 bali 6 - mchanganyiko unaweza kuwa na nguvu zaidi kuliko jumla rahisi ya vipengele vya msingi ingetuongoza kuamini. Mchakato huu unatupelekea kuunda vitu vikubwa vya kimwili, lakini tunaelewa mambo mengi yasiyoonekana kwa namna sawa; mchanganyiko wa vipengele sahihi katika mifumo ya kijamii au hata watu binafsi unaweza kuunda athari ya 2+2=6 sawa na kuchanganya metali.`,
   },
 ];

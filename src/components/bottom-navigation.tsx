@@ -2,6 +2,7 @@
 
 import { useEffect } from "react";
 import { Button } from "./ui/button";
+import { useLanguage } from "../context/language-context";
 
 interface BottomNavigationProps {
   onNext: () => void;
@@ -16,6 +17,8 @@ export function BottomNavigation({
   currentIndex,
   totalCount,
 }: BottomNavigationProps) {
+  const { t } = useLanguage();
+
   // Add keyboard event listeners
   useEffect(() => {
     const handleKeyDown = (event: KeyboardEvent) => {
@@ -56,7 +59,7 @@ export function BottomNavigation({
             <span className="hidden sm:inline text-xs text-muted-foreground bg-muted px-1.5 py-0.5 rounded">
               ←
             </span>
-            <span>Back</span>
+            <span>{t("nav.back")}</span>
           </Button>
 
           <span className="text-sm text-muted-foreground">
@@ -68,7 +71,7 @@ export function BottomNavigation({
             size="sm"
             className="flex items-center gap-1"
           >
-            <span>Next</span>
+            <span>{t("nav.next")}</span>
             <span className="hidden sm:inline text-xs text-muted-foreground bg-muted px-1.5 py-0.5 rounded">
               →
             </span>

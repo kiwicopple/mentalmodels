@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Suspense } from "react";
 import "./globals.css";
 import { MentalModelsProvider } from "../context/mental-models-context";
+import { LanguageProvider } from "../context/language-context";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -88,9 +89,11 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Suspense fallback={<div>Loading...</div>}>
-          <MentalModelsProvider>
-            {children}
-          </MentalModelsProvider>
+          <LanguageProvider>
+            <MentalModelsProvider>
+              {children}
+            </MentalModelsProvider>
+          </LanguageProvider>
         </Suspense>
       </body>
     </html>

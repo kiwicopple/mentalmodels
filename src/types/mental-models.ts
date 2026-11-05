@@ -4,6 +4,10 @@ export interface MentalModel {
   description: string;
   author: string;
   slug: string;
+  /** Swahili translation of the model name (optional) */
+  nameSw?: string;
+  /** Swahili translation of the model description (optional) */
+  descriptionSw?: string;
 }
 
 export type CategoryName = 

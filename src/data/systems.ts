@@ -7,6 +7,8 @@ export const systems: MentalModel[] = [
     description: `One of the most important principles of systems is that they are sensitive to scale. Properties (or behaviors) tend to change when you scale them up or down. In studying complex systems, we must always be roughly quantifying – in orders of magnitude, at least – the scale at which we are observing, analyzing, or predicting the system.`,
     author: "model",
     slug: 'scale',
+    nameSw: "Kiwango (Scale)",
+    descriptionSw: `Moja ya kanuni muhimu zaidi za mifumo ni kwamba zinaathirika na kiwango. Sifa (au tabia) huelekea kubadilika unapozipanua au kuzipunguza. Katika kusoma mifumo tata, lazima kila wakati tuwe tunakadiria kwa ujumla - kwa utaratibu wa ukubwa, angalau - kiwango ambacho tunachunguza, kuchambua, au kutabiri mfumo.`,
   },
   {
     name: "Law of Diminishing Returns",
@@ -14,6 +16,8 @@ export const systems: MentalModel[] = [
     description: `Related to scale, most important real-world results are subject to an eventual decrease of incremental value. A good example would be a poor family: Give them enough money to thrive, and they are no longer poor. But after a certain point, additional money will not improve their lot; there is a clear diminishing return of additional dollars at some roughly quantifiable point. Often, the law of diminishing returns veers into negative territory – i.e., receiving too much money could destroy the poor family.`,
     author: "model",
     slug: 'law-of-diminishing-returns',
+    nameSw: "Sheria ya Mapato Yanayopungua",
+    descriptionSw: `Kuhusiana na kiwango, matokeo muhimu zaidi ya ulimwengu halisi hukumbwa na kupungua kwa thamani ya ziada hatimaye. Mfano mzuri ungekuwa familia maskini: Wape pesa za kutosha kustawi, na hawakuwa tena maskini. Lakini baada ya hatua fulani, pesa za ziada hazitaboresha hali yao; kuna kupungua dhahiri kwa mapato ya dola za ziada katika hatua fulani inayokadiriwa. Mara nyingi, sheria ya mapato yanayopungua huelekea kwenye eneo hasi - yaani, kupokea pesa nyingi sana kunaweza kuiharibu familia maskini.`,
   },
   {
     name: "Pareto Principle",
@@ -21,6 +25,8 @@ export const systems: MentalModel[] = [
     description: `Named for Italian polymath Vilfredo Pareto, who noticed that 80% of Italy's land was owned by about 20% of its population, the Pareto Principle states that a small amount of some phenomenon causes a disproportionately large effect. The Pareto Principle is an example of a power-law type of statistical distribution – as distinguished from a traditional bell curve – and is demonstrated in various phenomena ranging from wealth to city populations to important human habits.`,
     author: "model",
     slug: 'pareto-principle',
+    nameSw: "Kanuni ya Pareto",
+    descriptionSw: `Iliyopewa jina la mwanazuoni wa Italia Vilfredo Pareto, ambaye aligundua kwamba 80% ya ardhi ya Italia ilikuwa inamilikiwa na takriban 20% ya idadi ya watu wake, Kanuni ya Pareto inasema kwamba kiasi kidogo cha jambo fulani husababisha athari kubwa isiyo na uwiano. Kanuni ya Pareto ni mfano wa aina ya usambazaji wa kitakwimu wa sheria ya nguvu - tofauti na mzingo wa kengele wa jadi - na inaonyeshwa katika matukio mbalimbali kuanzia utajiri hadi idadi ya watu wa miji hadi tabia muhimu za binadamu.`,
   },
   {
     name: "Feedback Loops (and Homeostasis)",
@@ -28,6 +34,8 @@ export const systems: MentalModel[] = [
     description: `All complex systems are subject to positive and negative feedback loops whereby A causes B, which in turn influences A (and C), and so on – with higher-order effects frequently resulting from continual movement of the loop. In a homeostatic system, a change in A is often brought back into line by an opposite change in B to maintain the balance of the system, as with the temperature of the human body or the behavior of an organizational culture. Automatic feedback loops maintain a "static" environment unless and until an outside force changes the loop. A "runaway feedback loop" describes a situation in which the output of a reaction becomes its own catalyst (auto-catalysis).`,
     author: "model",
     slug: 'feedback-loops-and-homeostasis',
+    nameSw: "Mizunguko ya Majibu (na Homeostasis)",
+    descriptionSw: `Mifumo yote tata inakumbwa na mizunguko ya majibu chanya na hasi ambapo A husababisha B, ambayo nayo inaathiri A (na C), na kadhalika - na athari za viwango vya juu mara nyingi hutokea kutokana na mwendo wa mfululizo wa mzunguko. Katika mfumo wa homeostasis, mabadiliko ya A mara nyingi hurudishwa sawa na mabadiliko kinyume ya B ili kudumisha usawa wa mfumo, kama ilivyo kwa joto la mwili wa binadamu au tabia ya utamaduni wa shirika. Mizunguko ya majibu ya kiotomatiki hudumisha mazingira "thabiti" isipokuwa na hadi nguvu ya nje ibadilishe mzunguko. "Mzunguko wa majibu unaokimbia" unaeleza hali ambapo pato la mmenyuko linakuwa kichocheo chake chenyewe (auto-catalysis).`,
   },
   {
     name: "Chaos Dynamics (Sensitivity to Initial Conditions)",
@@ -35,6 +43,8 @@ export const systems: MentalModel[] = [
     description: `In a world such as ours, governed by chaos dynamics, small changes (perturbations) in initial conditions have massive downstream effects as near-infinite feedback loops occur; this phenomenon is also called the butterfly effect. This means that some aspects of physical systems (like the weather more than a few days from now) as well as social systems (the behavior of a group of human beings over a long period) are fundamentally unpredictable.`,
     author: "model",
     slug: 'chaos-dynamics-sensitivity-to-initial-conditions',
+    nameSw: "Mienendo ya Machafuko (Usikivu kwa Masharti ya Awali)",
+    descriptionSw: `Katika ulimwengu kama wetu, unaotawaliwa na mienendo ya machafuko, mabadiliko madogo (usumbufu) katika masharti ya awali yana athari kubwa za baadaye kwani mizunguko ya majibu isiyo na kikomo hutokea; jambo hili linaitwa pia athari ya kipepeo. Hii inamaanisha kwamba baadhi ya vipengele vya mifumo ya kimwili (kama hali ya hewa zaidi ya siku chache kutoka sasa) na pia mifumo ya kijamii (tabia ya kundi la binadamu kwa muda mrefu) haziwezi kutabirika kimsingi.`,
   },
   {
     name: "Preferential Attachment (Cumulative Advantage)",
@@ -42,6 +52,8 @@ export const systems: MentalModel[] = [
     description: `A preferential attachment situation occurs when the current leader is given more of the reward than the laggards, thereby tending to preserve or enhance the status of the leader. A strong network effect is a good example of preferential attachment; a market with 10x more buyers and sellers than the next largest market will tend to have a preferential attachment dynamic.`,
     author: "model",
     slug: 'preferential-attachment-cumulative-advantage',
+    nameSw: "Kushikamana kwa Upendeleo (Faida ya Kujumuika)",
+    descriptionSw: `Hali ya kushikamana kwa upendeleo hutokea wakati kiongozi wa sasa anapewa zawadi zaidi kuliko waliobaki nyuma, hivyo kuelekea kuhifadhi au kuongeza hadhi ya kiongozi. Athari kubwa ya mtandao ni mfano mzuri wa kushikamana kwa upendeleo; soko lenye wanunuzi na wauzaji mara 10 zaidi kuliko soko linalofuata kwa ukubwa litaelekea kuwa na mienendo ya kushikamana kwa upendeleo.`,
   },
   {
     name: "Emergence",
@@ -49,6 +61,8 @@ export const systems: MentalModel[] = [
     description: `Higher-level behavior tends to emerge from the interaction of lower-order components. The result is frequently not linear – not a matter of simple addition – but rather non-linear, or exponential. An important resulting property of emergent behavior is that it cannot be predicted from simply studying the component parts.`,
     author: "model",
     slug: 'emergence',
+    nameSw: "Kujitokeza (Emergence)",
+    descriptionSw: `Tabia ya kiwango cha juu huelekea kujitokeza kutokana na mwingiliano wa vipengele vya kiwango cha chini. Matokeo mara nyingi si ya mstari - si suala la kujumlisha rahisi - bali yasiyo ya mstari, au ya kipeo. Sifa muhimu inayotokana ya tabia inayojitokeza ni kwamba haiwezi kutabirika kwa kusoma tu sehemu zake.`,
   },
   {
     name: "Irreducibility",
@@ -56,6 +70,8 @@ export const systems: MentalModel[] = [
     description: `We find that in most systems there are irreducible quantitative properties, such as complexity, minimums, time, and length. Below the irreducible level, the desired result simply does not occur. One cannot get several women pregnant to reduce the amount of time needed to have one child, and one cannot reduce a successfully built automobile to a single part. These results are, to a defined point, irreducible.`,
     author: "model",
     slug: 'irreducibility',
+    nameSw: "Kutopunguzika (Irreducibility)",
+    descriptionSw: `Tunagundua kwamba katika mifumo mingi kuna sifa za kiasi zisizoweza kupunguzwa, kama utata, viwango vya chini, muda, na urefu. Chini ya kiwango kisichoweza kupunguzwa, matokeo yanayotakikana hayatokei tu. Mtu hawezi kuwapa wanawake kadhaa mimba ili kupunguza muda unaohitajika kuwa na mtoto mmoja, na mtu hawezi kupunguza gari lililojengwa kwa mafanikio kuwa sehemu moja. Matokeo haya, kwa hatua fulani, hayawezi kupunguzwa.`,
   },
   {
     name: "Tragedy of the Commons",
@@ -63,6 +79,8 @@ export const systems: MentalModel[] = [
     description: `A concept introduced by the economist and ecologist Garrett Hardin, the Tragedy of the Commons states that in a system where a common resource is shared, with no individual responsible for the wellbeing of the resource, it will tend to be depleted over time. The Tragedy is reducible to incentives: Unless people collaborate, each individual derives more personal benefit than the cost that he or she incurs, and therefore depletes the resource for fear of missing out.`,
     author: "model",
     slug: 'tragedy-of-the-commons',
+    nameSw: "Msiba wa Mali ya Pamoja",
+    descriptionSw: `Dhana iliyoanzishwa na mchumi na mwanaiikolojia Garrett Hardin, Msiba wa Mali ya Pamoja inasema kwamba katika mfumo ambapo rasilimali ya pamoja inashirikiwa, bila mtu binafsi kuwajibika kwa ustawi wa rasilimali, itaelekea kumalizika kwa muda. Msiba huo unaweza kupunguzwa kuwa vivutio: Isipokuwa watu washirikiane, kila mtu binafsi anapata manufaa zaidi ya kibinafsi kuliko gharama anayopata, na kwa hiyo anamaliza rasilimali kwa hofu ya kukosa.`,
   },
   {
     name: "Gresham's Law",
@@ -70,6 +88,8 @@ export const systems: MentalModel[] = [
     description: `Gresham's Law, named for the financier Thomas Gresham, states that in a system of circulating currency, forged currency will tend to drive out real currency, as real currency is hoarded and forged currency is spent. We see a similar result in human systems, as with bad behavior driving out good behavior in a crumbling moral system, or bad practices driving out good practices in a crumbling economic system. Generally, regulation and oversight are required to prevent results that follow Gresham's Law.`,
     author: "model",
     slug: 'greshams-law',
+    nameSw: "Sheria ya Gresham",
+    descriptionSw: `Sheria ya Gresham, iliyopewa jina la mfadhili Thomas Gresham, inasema kwamba katika mfumo wa sarafu zinazozunguka, sarafu ghushi itaelekea kufukuza sarafu halisi, kwani sarafu halisi huwekwa akiba na sarafu ghushi hutumika. Tunaona matokeo sawa katika mifumo ya binadamu, kama tabia mbaya inavyofukuza tabia nzuri katika mfumo wa maadili unaoporomoka, au mazoea mabaya yakifukuza mazoea mazuri katika mfumo wa kiuchumi unaoporomoka. Kwa ujumla, udhibiti na usimamizi vinahitajika kuzuia matokeo yanayofuata Sheria ya Gresham.`,
   },
   {
     name: "Algorithms",
@@ -77,6 +97,8 @@ export const systems: MentalModel[] = [
     description: `While hard to precisely define, an algorithm is generally an automated set of rules or a "blueprint" leading a series of steps or actions resulting in a desired outcome, and often stated in the form of a series of "If → Then" statements. Algorithms are best known for their use in modern computing, but are a feature of biological life as well. For example, human DNA contains an algorithm for building a human being.`,
     author: "model",
     slug: 'algorithms',
+    nameSw: "Kanuni za Taratibu (Algorithms)",
+    descriptionSw: `Ingawa ni vigumu kufafanua kwa usahihi, kanuni ya taratibu (algorithm) kwa ujumla ni seti ya sheria za kiotomatiki au "ramani" inayoongoza mfululizo wa hatua au vitendo vinavyosababisha matokeo yanayotakikana, na mara nyingi hutajwa kwa namna ya mfululizo wa kauli za "Kama → Basi". Kanuni za taratibu zinajulikana zaidi kwa matumizi yake katika kompyuta ya kisasa, lakini ni sifa ya maisha ya kibayolojia pia. Kwa mfano, DNA ya binadamu ina kanuni ya taratibu ya kumjenga binadamu.`,
   },
   {
     name: "Fragility – Robustness – Antifragility",
@@ -84,6 +106,8 @@ export const systems: MentalModel[] = [
     description: `Popularized by Nassim Taleb, the sliding scale of fragility, robustness, and antifragility refers to the responsiveness of a system to incremental negative variability. A fragile system or object is one in which additional negative variability has a disproportionately negative impact, as with a coffee cup shattering from a 6-foot fall, but receiving no damage at all (rather than 1/6th of the damage) from a 1-foot fall. A robust system or object tends to be neutral to the additional negativity variability, and of course, an antifragile system benefits: If there were a cup that got stronger when dropped from 6 feet than when dropped from 1 foot, it would be termed antifragile.`,
     author: "model",
     slug: 'fragility-robustness-antifragility',
+    nameSw: "Kuvunjika – Kuthibiti – Kutokuwa na Uvunjifu",
+    descriptionSw: `Iliyoenezwa na Nassim Taleb, kipimo kinachoteleza cha uvunjifu, uthibiti, na kutokuwa na uvunjifu kinarejelea mwitikio wa mfumo kwa mabadiliko hasi yanayoongezeka. Mfumo au kitu chenye uvunjifu ni kile ambacho mabadiliko hasi ya ziada yana athari hasi isiyo na uwiano, kama kikombe cha kahawa kinachovunjika kutokana na kuanguka kwa futi 6, lakini kisichopata uharibifu wowote (badala ya 1/6 ya uharibifu) kutokana na kuanguka kwa futi 1. Mfumo au kitu chenye uthibiti huelekea kuwa na upande wowote kwa mabadiliko hasi ya ziada, na bila shaka, mfumo usio na uvunjifu unafaidika: Kama kungekuwa na kikombe kinachopata nguvu zaidi kinapoangushwa kutoka futi 6 kuliko kinapoangushwa kutoka futi 1, kingeitwa kisicho na uvunjifu.`,
   },
   {
     name: "Backup Systems/Redundancy",
@@ -91,6 +115,8 @@ export const systems: MentalModel[] = [
     description: `A critical model of the engineering profession is that of backup systems. A good engineer never assumes the perfect reliability of the components of the system. He or she builds in redundancy to protect the integrity of the total system. Without the application of this robustness principle, tangible and intangible systems tend to fail over time.`,
     author: "model",
     slug: 'backup-systems-redundancy',
+    nameSw: "Mifumo ya Akiba / Kurudia (Redundancy)",
+    descriptionSw: `Mfano muhimu wa taaluma ya uhandisi ni ule wa mifumo ya akiba. Mhandisi mzuri hafikirii kamwe kwamba vifaa vya mfumo ni vya kutegemewa kikamilifu. Anajenga kurudia (redundancy) kulinda uadilifu wa mfumo mzima. Bila kutumia kanuni hii ya uthibiti, mifumo inayoonekana na isiyoonekana huelekea kushindwa kwa muda.`,
   },
   {
     name: "Margin of Safety",
@@ -98,6 +124,8 @@ export const systems: MentalModel[] = [
     description: `Similarly, engineers have also developed the habit of adding a margin for error into all calculations. In an unknown world, driving a 9,500-pound bus over a bridge built to hold precisely 9,600 pounds is rarely seen as intelligent. Thus, on the whole, few modern bridges ever fail. In practical life outside of physical engineering, we can often profitably give ourselves margins as robust as the bridge system.`,
     author: "model",
     slug: 'margin-of-safety',
+    nameSw: "Ukingo wa Usalama",
+    descriptionSw: `Vivyo hivyo, wahandisi wameunda tabia ya kuongeza ukingo wa makosa katika hesabu zote. Katika ulimwengu usiojulikana, kuendesha basi la pauni 9,500 juu ya daraja lililojengwa kushikilia pauni 9,600 kwa usahihi mara chache huonekana kuwa akili. Kwa hiyo, kwa ujumla, madaraja machache ya kisasa hushindwa. Katika maisha ya kivitendo nje ya uhandisi wa kimwili, mara nyingi tunaweza kwa faida kujipa ukingo wenye uthibiti kama mfumo wa daraja.`,
   },
   {
     name: "Criticality",
@@ -105,6 +133,8 @@ export const systems: MentalModel[] = [
     description: `A system becomes critical when it is about to jump discretely from one phase to another. The marginal utility of the last unit before the phase change is wildly higher than any unit before it. A frequently cited example is water turning from a liquid to a vapor when heated to a specific temperature. "Critical mass" refers to the mass needed to have the critical event occur, most commonly in a nuclear system.`,
     author: "model",
     slug: 'criticality',
+    nameSw: "Hali Muhimu (Criticality)",
+    descriptionSw: `Mfumo unakuwa katika hali muhimu unapokuwa karibu kuruka kwa kasi kutoka awamu moja hadi nyingine. Thamani ya matumizi ya kando ya kitengo cha mwisho kabla ya mabadiliko ya awamu ni kubwa sana kuliko kitengo chochote kilichotangulia. Mfano unaotajwa mara kwa mara ni maji yanayobadilika kutoka kimiminika hadi mvuke yanapopashwa hadi joto maalum. "Uzito muhimu" unarejelea uzito unaohitajika kufanya tukio muhimu litokee, kwa kawaida katika mfumo wa nyuklia.`,
   },
   {
     name: "Network Effects",
@@ -112,6 +142,8 @@ export const systems: MentalModel[] = [
     description: `A network tends to become more valuable as nodes are added to the network: this is known as the network effect. An easy example is contrasting the development of the electricity system and the telephone system. If only one house has electricity, its inhabitants have gained immense value, but if only one house has a telephone, its inhabitants have gained nothing of use. Only with additional telephones does the phone network gain value. This network effect is widespread in the modern world and creates immense value for organizations and customers alike.`,
     author: "model",
     slug: 'network-effects',
+    nameSw: "Athari za Mtandao",
+    descriptionSw: `Mtandao huelekea kuwa na thamani zaidi kadri nodi zinavyoongezwa kwenye mtandao: hili linaitwa athari ya mtandao. Mfano rahisi ni kulinganisha maendeleo ya mfumo wa umeme na mfumo wa simu. Ikiwa nyumba moja tu ina umeme, wakazi wake wamepata thamani kubwa, lakini ikiwa nyumba moja tu ina simu, wakazi wake hawajapata kitu cha manufaa. Ni kwa simu za ziada tu ndipo mtandao wa simu unapata thamani. Athari hii ya mtandao imeenea katika ulimwengu wa kisasa na inaunda thamani kubwa kwa mashirika na wateja sawa.`,
   },
   {
     name: "Black Swan",
@@ -119,6 +151,8 @@ export const systems: MentalModel[] = [
     description: `Also popularized by Nassim Taleb, a Black Swan is a rare and highly consequential event that is invisible to a given observer ahead of time. It is a result of applied epistemology: If you have seen only white swans, you cannot categorically state that there are no black swans, but the inverse is not true: seeing one black swan is enough for you to state that there are black swans. Black Swan events are necessarily unpredictable to the observer (as Taleb likes to say, Thanksgiving is a Black Swan for the turkey, not the butcher) and thus must be dealt with by addressing the fragility-robustness-antifragility spectrum rather than through better methods of prediction.`,
     author: "model",
     slug: 'black-swan',
+    nameSw: "Bata Mweusi (Black Swan)",
+    descriptionSw: `Pia iliyoenezwa na Nassim Taleb, Bata Mweusi ni tukio adimu na lenye matokeo makubwa ambalo halionekani kwa mtazamaji fulani kabla ya wakati. Ni matokeo ya epistemolojia inayotumika: Ikiwa umeona mabata weupe tu, huwezi kusema kwa hakika kwamba hakuna mabata weusi, lakini kinyume chake si kweli: kuona bata mmoja mweusi kunatosha kusema kwamba kuna mabata weusi. Matukio ya Bata Mweusi hayawezi kutabirika kwa mtazamaji (kama Taleb anavyopenda kusema, Siku ya Shukrani ni Bata Mweusi kwa bata mzinga, si mchinjaji) na kwa hiyo lazima yashughulikiwe kwa kukabiliana na wigo wa uvunjifu-uthibiti-kutokuwa na uvunjifu badala ya njia bora zaidi za utabiri.`,
   },
   {
     name: "Via Negativa – Omission / Removal / Avoidance of Harm",
@@ -126,6 +160,8 @@ export const systems: MentalModel[] = [
     description: `In many systems, improvement is at best, or at times only, a result of removing bad elements rather than of adding good elements. This is a credo built into the modern medical profession: First, do no harm. Similarly, if one has a group of children behaving badly, removal of the instigator is often much more effective than any form of punishment meted out to the whole group.`,
     author: "model",
     slug: 'via-negativa-omission-removal-avoidance-of-harm',
+    nameSw: "Via Negativa – Kuacha / Kuondoa / Kuepuka Madhara",
+    descriptionSw: `Katika mifumo mingi, uboreshaji ni bora zaidi, au wakati mwingine tu, matokeo ya kuondoa vipengele vibaya badala ya kuongeza vipengele vizuri. Hili ni imani iliyojengwa ndani ya taaluma ya kisasa ya tiba: Kwanza, usidhuru. Vivyo hivyo, ikiwa mtu ana kundi la watoto wanaofanya vibaya, kuondoa mchochezi mara nyingi kuna ufanisi zaidi kuliko aina yoyote ya adhabu inayotolewa kwa kundi zima.`,
   },
   {
     name: "The Lindy Effect",
@@ -133,6 +169,8 @@ export const systems: MentalModel[] = [
     description: `The Lindy Effect refers to the life expectancy of a non-perishable object or idea being related to its current lifespan. If an idea or object has lasted for X number of years, it would be expected (on average) to last another X years. Although a human being who is 90 and lives to 95 does not add 5 years to his or her life expectancy, non-perishables lengthen their life expectancy as they continually survive. A classic text is a prime example: if humanity has been reading Shakespeare's plays for 500 years, it will be expected to read them for another 500.`,
     author: "model",
     slug: 'the-lindy-effect',
+    nameSw: "Athari ya Lindy",
+    descriptionSw: `Athari ya Lindy inarejelea matarajio ya maisha ya kitu kisichoharibika au wazo kuhusiana na muda wake wa sasa wa kuishi. Ikiwa wazo au kitu kimedumu kwa miaka X, kitatarajiwa (kwa wastani) kudumu miaka X nyingine. Ingawa binadamu mwenye miaka 90 anayeishi hadi 95 haongezi miaka 5 kwa matarajio yake ya maisha, vitu visivyoharibika huongeza matarajio yao ya maisha kadri vinavyoendelea kuishi. Maandishi ya kitambo ni mfano mkuu: ikiwa ubinadamu umekuwa ukisoma tamthilia za Shakespeare kwa miaka 500, utatarajiwa kuzisoma kwa miaka 500 nyingine.`,
   },
   {
     name: "Renormalization Group",
@@ -140,6 +178,8 @@ export const systems: MentalModel[] = [
     description: `The renormalization group technique allows us to think about physical and social systems at different scales. An idea from physics, and a complicated one at that, the application of a renormalization group to social systems allows us to understand why a small number of stubborn individuals can have a disproportionate impact if those around them follow suit on increasingly large scales.`,
     author: "model",
     slug: 'renormalization-group',
+    nameSw: "Kundi la Kurekebisha Upya (Renormalization Group)",
+    descriptionSw: `Mbinu ya kundi la kurekebisha upya inaturuhusu kufikiri kuhusu mifumo ya kimwili na ya kijamii katika viwango tofauti. Wazo kutoka fizikia, na tata pia, matumizi ya kundi la kurekebisha upya kwa mifumo ya kijamii yanaturuhusu kuelewa kwanini idadi ndogo ya watu wakaidi wanaweza kuwa na athari isiyo na uwiano ikiwa wale wanaowazunguka watafuata kwa viwango vinavyozidi kuwa vikubwa.`,
   },
   {
     name: "Spring-loading",
@@ -147,6 +187,8 @@ export const systems: MentalModel[] = [
     description: `A system is spring-loaded if it is coiled in a certain direction, positive or negative. Positively spring-loading systems and relationships is important in a fundamentally unpredictable world to help protect us against negative events. The reverse can be very destructive.`,
     author: "model",
     slug: 'spring-loading',
+    nameSw: "Kujipanga kwa Chemchemi (Spring-loading)",
+    descriptionSw: `Mfumo ni wenye kujipanga kwa chemchemi ikiwa umekunjwa katika mwelekeo fulani, chanya au hasi. Kujipanga kwa chemchemi kwa namna chanya kwa mifumo na mahusiano ni muhimu katika ulimwengu usiotabirika kimsingi ili kutusaidia kujikinga dhidi ya matukio hasi. Kinyume chake kinaweza kuwa na uharibifu mkubwa.`,
   },
   {
     name: "Complex Adaptive Systems",
@@ -154,5 +196,7 @@ export const systems: MentalModel[] = [
     description: `A complex adaptive system, as distinguished from a complex system in general, is one that can understand itself and change based on that understanding. Complex adaptive systems are social systems. The difference is best illustrated by thinking about weather prediction contrasted to stock market prediction. The weather will not change based on an important forecaster's opinion, but the stock market might. Complex adaptive systems are thus fundamentally not predictable.`,
     author: "model",
     slug: 'complex-adaptive-systems',
+    nameSw: "Mifumo Tata ya Kubadilika",
+    descriptionSw: `Mfumo tata wa kubadilika, tofauti na mfumo tata kwa ujumla, ni ule unaoweza kujielewa na kubadilika kulingana na uelewa huo. Mifumo tata ya kubadilika ni mifumo ya kijamii. Tofauti hiyo inaonyeshwa vizuri zaidi kwa kufikiri kuhusu utabiri wa hali ya hewa ukilinganishwa na utabiri wa soko la hisa. Hali ya hewa haitabadilika kulingana na maoni ya mtabiri muhimu, lakini soko la hisa linaweza. Mifumo tata ya kubadilika kwa hiyo haitabiriki kimsingi.`,
   },
 ];
