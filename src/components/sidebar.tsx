@@ -1,6 +1,7 @@
 "use client";
 
 import { useMentalModels } from "../context/mental-models-context";
+import { useLanguage } from "../context/language-context";
 import { CategoryName, CATEGORIES } from "../types/mental-models";
 import { Button } from "./ui/button";
 import { Checkbox } from "./ui/checkbox";
@@ -14,6 +15,7 @@ interface SidebarProps {
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
   const { selectedCategories, updateCategoriesAndURL, models } =
     useMentalModels();
+  const { t } = useLanguage();
 
   const handleCategoryChange = (category: CategoryName, checked: boolean) => {
     if (checked) {
@@ -66,7 +68,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
               className="w-full justify-start p-2 hover:bg-accent"
               onClick={toggleAll}
             >
-              Toggle All
+              {t("sidebar.toggleAll")}
             </Button>
             <div className="space-y-2">
               {CATEGORIES.map((category) => (
@@ -82,7 +84,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     htmlFor={category}
                     className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer"
                   >
-                    {category} ({getCategoryCount(category)})
+                    {t(`category.${category}`)} ({getCategoryCount(category)})
                   </label>
                 </div>
               ))}
@@ -92,34 +94,27 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           {/* About Section */}
           <div className="space-y-3">
             <h3 className="text-sm font-semibold text-muted-foreground">
-              About
+              {t("sidebar.about")}
             </h3>
             <div className="text-sm text-muted-foreground space-y-3">
+              <p>{t("sidebar.about.text.1")}</p>
               <p>
-                Mental models are &quot;core concepts&quot;. They unchanging
-                fundamentals for a particular subject. Learning these concepts
-                will give you a better comprehension of the world and help you
-                make rational decisions.
+                {t("sidebar.about.text.2", {
+                  count: models.length,
+                  categories: CATEGORIES.length,
+                })}
               </p>
-              <p>
-                This app is a shuffled list of {models.length} mental models,
-                grouped into {CATEGORIES.length} color-coded categories.
-              </p>
-              <p>
-                Try to do a few each day. Spaced repetition will help you
-                remember. If you are using a mobile you can add this page to
-                your homescreen and use it offline.
-              </p>
+              <p>{t("sidebar.about.text.3")}</p>
             </div>
           </div>
 
           {/* Acknowledgements */}
           <div className="space-y-3">
             <h3 className="text-sm font-semibold text-muted-foreground">
-              Acknowledgements
+              {t("sidebar.acknowledgements")}
             </h3>
             <div className="text-sm text-muted-foreground">
-              <p className="mb-2">Credit for models</p>
+              <p className="mb-2">{t("sidebar.acknowledgements.credit")}</p>
               <ul className="list-disc list-inside space-y-1">
                 <li>
                   <a
@@ -128,7 +123,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
                   >
-                    Farnam Street
+                    {t("sidebar.farnamStreet")}
                   </a>
                 </li>
                 <li>
@@ -138,7 +133,7 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
                     rel="noopener noreferrer"
                     className="text-primary hover:underline"
                   >
-                    Your Logical Fallacy Is
+                    {t("sidebar.yourLogicalFallacyIs")}
                   </a>
                 </li>
               </ul>
@@ -148,17 +143,17 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
           {/* Source Code */}
           <div className="space-y-3">
             <h3 className="text-sm font-semibold text-muted-foreground">
-              Source Code
+              {t("sidebar.sourceCode")}
             </h3>
             <p className="text-sm text-muted-foreground">
-              You can find the source code for this app on{" "}
+              {t("sidebar.sourceCode.text")}{" "}
               <a
                 href="https://github.com/kiwicopple/mentalmodels"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary hover:underline"
               >
-                Github
+                {t("sidebar.github")}
               </a>
             </p>
           </div>

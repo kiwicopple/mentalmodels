@@ -7,6 +7,8 @@ export const numeracy: MentalModel[] = [
     description: `The mathematics of permutations and combinations leads us to understand the practical probabilities of the world around us, how things can be ordered, and how we should think about things.`,
     author: "model",
     slug: 'permutations-and-combinations',
+    nameSw: "Mpangilio na Mchanganyiko",
+    descriptionSw: `Hisabati ya mpangilio (permutations) na mchanganyiko (combinations) hutusaidia kuelewa uwezekano halisi wa ulimwengu unaotuzunguka, jinsi vitu vinavyoweza kupangwa, na jinsi tunavyopaswa kufikiri kuhusu vitu.`,
   },
   {
     name: "Algebraic Equivalence",
@@ -14,6 +16,8 @@ export const numeracy: MentalModel[] = [
     description: `The introduction of algebra allowed us to demonstrate mathematically and abstractly that two seemingly different things could be the same. By manipulating symbols, we can demonstrate equivalence or inequivalence, the use of which led humanity to untold engineering and technical abilities. Knowing at least the basics of algebra can allow us to understand a variety of important results.`,
     author: "model",
     slug: 'algebraic-equivalence',
+    nameSw: "Usawa wa Aljebra",
+    descriptionSw: `Kuanzishwa kwa aljebra kulituruhusu kuonyesha kwa njia ya hisabati na ya kidhahania kwamba vitu viwili vinavyoonekana tofauti vinaweza kuwa sawa. Kwa kubadilisha alama, tunaweza kuonyesha usawa au kutokuwa sawa, jambo ambalo lilipelekea ubinadamu kupata uwezo mkubwa wa uhandisi na ufundi. Kujua angalau misingi ya aljebra kunaweza kutusaidia kuelewa matokeo mbalimbali muhimu.`,
   },
   {
     name: "Randomness",
@@ -21,6 +25,8 @@ export const numeracy: MentalModel[] = [
     description: `Though the human brain has trouble comprehending it, much of the world is composed of random, non-sequential, non-ordered events. We are "fooled" by random effects when we attribute causality to things that are actually outside of our control. If we don't course-correct for this fooled-by-randomness effect – our faulty sense of pattern-seeking – we will tend to see things as being more predictable than they are and act accordingly.`,
     author: "model",
     slug: 'randomness',
+    nameSw: "Nasibu",
+    descriptionSw: `Ingawa ubongo wa binadamu una ugumu wa kuelewa, sehemu kubwa ya ulimwengu huundwa na matukio ya nasibu, yasiyo na mfuatano, na yasiyo na mpangilio. "Tunadanganywa" na athari za nasibu tunapohusisha sababu na mambo ambayo kwa kweli yako nje ya uwezo wetu. Ikiwa hatutajirekebisha dhidi ya athari hii ya kudanganywa na nasibu - hisia yetu yenye kasoro ya kutafuta ruwaza - tutaelekea kuona mambo kuwa yanaweza kutabirika zaidi kuliko yalivyo na kutenda kwa mujibu wake.`,
   },
   {
     name: "Stochastic Processes (Poisson, Markov, Random Walk)",
@@ -28,6 +34,8 @@ export const numeracy: MentalModel[] = [
     description: `A stochastic process is a random statistical process and encompasses a wide variety of processes in which the movement of an individual variable can be impossible to predict but can be thought through probabilistically. The wide variety of stochastic methods helps us describe systems of variables through probabilities without necessarily being able to determine the position of any individual variable over time. For example, it's not possible to predict stock prices on a day-to-day basis, but we can describe the probability of various distributions of their movements over time. Obviously, it is much more likely that the stock market (a stochastic process) will be up or down 1% in a day than up or down 10%, even though we can't predict what tomorrow will bring.`,
     author: "model",
     slug: 'stochastic-processes-poisson-markov-random-walk',
+    nameSw: "Michakato ya Kistochastiki (Poisson, Markov, Matembezi Nasibu)",
+    descriptionSw: `Mchakato wa kistochastiki ni mchakato wa kitakwimu wa nasibu na unajumuisha aina mbalimbali za michakato ambapo mwendo wa kigezo kimoja unaweza kuwa hauwezi kutabirika lakini unaweza kufikiriwa kwa uwezekano. Mbinu mbalimbali za kistochastiki hutusaidia kueleza mifumo ya vigezo kupitia uwezekano bila ya lazima kuweza kubaini nafasi ya kigezo chochote binafsi kwa wakati. Kwa mfano, haiwezekani kutabiri bei za hisa siku hadi siku, lakini tunaweza kueleza uwezekano wa usambazaji mbalimbali wa mwendo wake kwa wakati. Ni dhahiri kuwa kuna uwezekano mkubwa zaidi kwamba soko la hisa (mchakato wa kistochastiki) litapanda au kushuka kwa 1% kwa siku kuliko kupanda au kushuka kwa 10%, hata kama hatuwezi kutabiri kesho italeta nini.`,
   },
   {
     name: "Compounding",
@@ -35,6 +43,8 @@ export const numeracy: MentalModel[] = [
     description: `It's been said that Einstein called compounding a wonder of the world. He probably didn't, but it is a wonder. Compounding is the process by which we add interest to a fixed sum, which then earns interest on the previous sum and the newly added interest, and then earns interest on that amount, and so on ad infinitum. It is an exponential effect, rather than a linear, or additive, effect. Money is not the only thing that compounds; ideas and relationships do as well. In tangible realms, compounding is always subject to physical limits and diminishing returns; intangibles can compound more freely. Compounding also leads to the time value of money, which underlies all of modern finance.`,
     author: "model",
     slug: 'compounding',
+    nameSw: "Kujumlisha Riba (Riba Juu ya Riba)",
+    descriptionSw: `Imesemekana kwamba Einstein aliuita mchakato wa kujumlisha riba "ajabu la dunia." Labda hakufanya hivyo, lakini ni ajabu kweli. Kujumlisha ni mchakato ambao tunaongeza riba kwenye kiasi maalum, kisha riba hiyo inachuma riba juu ya kiasi cha awali na riba mpya iliyoongezwa, kisha inachuma riba juu ya kiasi hicho, na kadhalika bila mwisho. Ni athari ya kipeo (exponential), si ya mstari (linear) au ya kujumlisha. Pesa si kitu pekee kinachojumlisha; mawazo na mahusiano pia hujumlisha. Katika nyanja zinazoonekana, kujumlisha huwa chini ya mipaka ya kimwili na mapato yanayopungua; mambo yasiyoonekana yanaweza kujumlisha kwa uhuru zaidi. Kujumlisha pia husababisha thamani ya wakati ya pesa, ambayo ndiyo msingi wa fedha zote za kisasa.`,
   },
   {
     name: "Multiplying by Zero",
@@ -42,6 +52,8 @@ export const numeracy: MentalModel[] = [
     description: `Any reasonably educated person knows that any number multiplied by zero, no matter how large the number, is still zero. This is true in human systems as well as mathematical ones. In some systems, a failure in one area can negate great effort in all other areas. As simple multiplication would show, fixing the "zero" often has a much greater effect than does trying to enlarge the other areas.`,
     author: "model",
     slug: 'multiplying-by-zero',
+    nameSw: "Kuzidisha kwa Sifuri",
+    descriptionSw: `Mtu yeyote mwenye elimu ya kutosha anajua kwamba nambari yoyote ikizidishwa kwa sifuri, hata ikiwa nambari hiyo ni kubwa kiasi gani, bado ni sifuri. Hili ni kweli katika mifumo ya binadamu kama ilivyo katika mifumo ya hisabati. Katika baadhi ya mifumo, kushindwa katika eneo moja kunaweza kubatilisha juhudi kubwa katika maeneo mengine yote. Kama kuzidisha rahisi kungeonyesha, kurekebisha "sifuri" mara nyingi kuna athari kubwa zaidi kuliko kujaribu kupanua maeneo mengine.`,
   },
   {
     name: "Churn",
@@ -49,6 +61,8 @@ export const numeracy: MentalModel[] = [
     description: `Insurance companies and subscription services are well aware of the concept of churn – every year, a certain number of customers are lost and must be replaced. Standing still is the equivalent of losing, as seen in the model called the "Red Queen Effect." Churn is present in many business and human systems: A constant figure is periodically lost and must be replaced before any new figures are added over the top.`,
     author: "model",
     slug: 'churn',
+    nameSw: "Upotevu wa Mara kwa Mara (Churn)",
+    descriptionSw: `Makampuni ya bima na huduma za usajili wanafahamu vizuri dhana ya "churn" - kila mwaka, idadi fulani ya wateja hupotea na lazima wabadilishwe. Kusimama palepale ni sawa na kupoteza, kama inavyoonekana katika mfano unaoitwa "Red Queen Effect." Upotevu huu upo katika mifumo mingi ya biashara na ya binadamu: kiasi kisichobadilika hupotea mara kwa mara na lazima kibadilishwe kabla ya nambari mpya kuongezwa juu yake.`,
   },
   {
     name: "Law of Large Numbers",
@@ -56,6 +70,8 @@ export const numeracy: MentalModel[] = [
     description: `One of the fundamental underlying assumptions of probability is that as more instances of an event occur, the actual results will converge on the expected ones. For example, if I know that the average man is 5 feet 10 inches tall, I am far more likely to get an average of 5′10″ by selecting 500 men at random than 5 men at random. The opposite of this model is the law of small numbers, which states that small samples can and should be looked at with great skepticism.`,
     author: "model",
     slug: 'law-of-large-numbers',
+    nameSw: "Sheria ya Idadi Kubwa",
+    descriptionSw: `Mojawapo ya dhana za msingi za uwezekano ni kwamba kadri matukio ya tukio fulani yanavyoongezeka, matokeo halisi yatakaribia yale yanayotarajiwa. Kwa mfano, ikiwa najua kwamba urefu wa wastani wa mwanamume ni futi 5 na inchi 10, nina uwezekano mkubwa zaidi kupata wastani wa futi 5'10'' kwa kuchagua wanaume 500 kwa nasibu kuliko wanaume 5 kwa nasibu. Kinyume cha mfano huu ni sheria ya idadi ndogo, ambayo inasema kwamba sampuli ndogo zinaweza na zinapaswa kuchunguzwa kwa mashaka makubwa.`,
   },
   {
     name: "Bell Curve/Normal Distribution",
@@ -63,6 +79,8 @@ export const numeracy: MentalModel[] = [
     description: `The normal distribution is a statistical process that leads to the well-known graphical representation of a bell curve, with a meaningful central "average" and increasingly rare standard deviations from that average when correctly sampled. (The so-called "central limit" theorem.) Well-known examples include human height and weight, but it's just as important to note that many common processes, especially in non-tangible systems like social systems, do not follow the normal distribution.`,
     author: "model",
     slug: 'bell-curve-normal-distribution',
+    nameSw: "Mzingo wa Kengele / Usambazaji wa Kawaida",
+    descriptionSw: `Usambazaji wa kawaida ni mchakato wa kitakwimu unaoleta kielelezo maarufu cha mzingo wa kengele, wenye "wastani" wa kati wenye maana na kupotoka kwa kawaida kunakozidi kuwa nadra kutoka kwenye wastani huo kunapochukuliwa sampuli kwa usahihi. (Kinachojulikana kama nadharia ya "kikomo cha kati.") Mifano maarufu ni urefu na uzito wa binadamu, lakini ni muhimu pia kutambua kwamba michakato mingi ya kawaida, hasa katika mifumo isiyoonekana kama mifumo ya kijamii, haifuati usambazaji wa kawaida.`,
   },
   {
     name: "Power Laws",
@@ -70,6 +88,8 @@ export const numeracy: MentalModel[] = [
     description: `One of the most common processes that does not fit the normal distribution is that of a power law, whereby one quantity varies with another's exponent rather than linearly. For example, the Richter scale describes the power of earthquakes on a power-law distribution scale: an 8 is 10x more destructive than a 7, and a 9 is 10x more destructive than an 8. The central limit theorem does not apply and there is thus no "average" earthquake. This is true of all power-law distributions.`,
     author: "model",
     slug: 'power-laws',
+    nameSw: "Sheria za Nguvu",
+    descriptionSw: `Mojawapo ya michakato ya kawaida isiyofaa usambazaji wa kawaida ni ile ya sheria ya nguvu, ambapo kiasi kimoja hubadilika kulingana na kipeo cha kingine badala ya kwa mstari. Kwa mfano, kipimo cha Richter hueleza nguvu ya matetemeko ya ardhi kwenye kipimo cha sheria ya nguvu: tetemeko la 8 ni hatari mara 10 kuliko la 7, na la 9 ni hatari mara 10 kuliko la 8. Nadharia ya kikomo cha kati haitumiki na kwa hiyo hakuna tetemeko la ardhi "la wastani." Hili ni kweli kwa usambazaji wote wa sheria za nguvu.`,
   },
   {
     name: "Fat-Tailed Processes (Extremistan)",
@@ -77,6 +97,8 @@ export const numeracy: MentalModel[] = [
     description: `A process can often look like a normal distribution but have a large "tail" – meaning that seemingly outlier events are far more likely than they are in an actual normal distribution. A strategy or process may be far more risky than a normal distribution is capable of describing if the fat tail is on the negative side, or far more profitable if the fat tail is on the positive side. Much of the human social world is said to be fat-tailed rather than normally distributed.`,
     author: "model",
     slug: 'fat-tailed-processes-extremistan',
+    nameSw: "Michakato yenye Mkia Mnene (Extremistan)",
+    descriptionSw: `Mchakato unaweza mara nyingi kuonekana kama usambazaji wa kawaida lakini uwe na "mkia" mkubwa - kumaanisha kwamba matukio yanayoonekana kuwa ya nje yana uwezekano mkubwa zaidi kuliko ilivyo katika usambazaji halisi wa kawaida. Mkakati au mchakato unaweza kuwa hatari zaidi kuliko usambazaji wa kawaida unavyoweza kueleza ikiwa mkia mnene upo upande hasi, au wenye faida zaidi ikiwa mkia mnene upo upande chanya. Sehemu kubwa ya ulimwengu wa kijamii wa binadamu inasemekana kuwa na mkia mnene badala ya kusambazwa kwa kawaida.`,
   },
   {
     name: "Bayesian Updating",
@@ -84,6 +106,8 @@ export const numeracy: MentalModel[] = [
     description: `The Bayesian method is a method of thought (named for Thomas Bayes) whereby one takes into account all prior relevant probabilities and then incrementally updates them as newer information arrives. This method is especially productive given the fundamentally non-deterministic world we experience: We must use prior odds and new information in combination to arrive at our best decisions. This is not necessarily our intuitive decision-making engine.`,
     author: "model",
     slug: 'bayesian-updating',
+    nameSw: "Usasishaji wa Bayesian",
+    descriptionSw: `Njia ya Bayesian ni njia ya kufikiri (iliyopewa jina la Thomas Bayes) ambapo mtu huzingatia uwezekano wote wa awali unaohusika na kisha kuzisasisha hatua kwa hatua kadri taarifa mpya inavyofika. Njia hii ni yenye tija hasa kutokana na ulimwengu usioamua (non-deterministic) tunaouishi: Lazima tutumie uwezekano wa awali na taarifa mpya kwa pamoja ili kufikia maamuzi yetu bora. Hii si lazima iwe injini yetu ya kimaumbile ya kufanya maamuzi.`,
   },
   {
     name: "Regression to the Mean",
@@ -91,6 +115,8 @@ export const numeracy: MentalModel[] = [
     description: `In a normally distributed system, long deviations from the average will tend to return to that average with an increasing number of observations: the so-called Law of Large Numbers. We are often fooled by regression to the mean, as with a sick patient improving spontaneously around the same time they begin taking an herbal remedy, or a poorly performing sports team going on a winning streak. We must be careful not to confuse statistically likely events with causal ones.`,
     author: "model",
     slug: 'regression-to-the-mean',
+    nameSw: "Kurejea kwa Wastani",
+    descriptionSw: `Katika mfumo wenye usambazaji wa kawaida, kupotoka kwa muda mrefu kutoka wastani kutaelekea kurejea kwenye wastani huo kadri idadi ya uchunguzi inavyoongezeka: hii ndiyo inayoitwa Sheria ya Idadi Kubwa. Mara nyingi tunadanganywa na kurejea kwa wastani, kama vile mgonjwa anayepona kwa hiari karibu na wakati anaanza kutumia dawa ya mitishamba, au timu ya michezo yenye utendaji mbaya kuanza mfululizo wa ushindi. Lazima tuwe waangalifu tusichanganye matukio yanayowezekana kitakwimu na yale yanayosababishwa na sababu.`,
   },
   {
     name: "Order of Magnitude",
@@ -98,6 +124,8 @@ export const numeracy: MentalModel[] = [
     description: `In many, perhaps most, systems, quantitative description down to a precise figure is either impossible or useless (or both). For example, estimating the distance between our galaxy and the next one over is a matter of knowing not the precise number of miles, but how many zeroes are after the 1. Is the distance about 1 million miles or about 1 billion? This thought habit can help us escape useless precision.`,
     author: "model",
     slug: 'order-of-magnitude',
+    nameSw: "Utaratibu wa Ukubwa",
+    descriptionSw: `Katika mifumo mingi, labda mingi zaidi, maelezo ya kiasi hadi nambari sahihi hayawezekani au hayana maana (au yote mawili). Kwa mfano, kukadiria umbali kati ya galaksi yetu na ile inayofuata ni suala la kujua si idadi sahihi ya maili, bali ni sifuri ngapi ziko baada ya 1. Je, umbali ni kama maili milioni 1 au kama bilioni 1? Tabia hii ya kufikiri inaweza kutusaidia kuepuka usahihi usio na maana.`,
   },
   {
     name: "Optimal Stopping",
@@ -105,5 +133,7 @@ export const numeracy: MentalModel[] = [
     description: `Optimal stopping theory addresses the problem of choosing the right moment to take a particular action in order to maximize reward or minimize cost. The most famous example is the "secretary problem" or "37% rule": when evaluating a series of options sequentially (like job candidates or apartments), you should spend roughly 37% of your time exploring and rejecting all options, then select the next option that exceeds all previous ones. This mathematically-derived strategy balances the trade-off between gathering more information and the risk of losing good opportunities. The principle applies broadly to decisions involving search and selection under uncertainty, from hiring to house-hunting to finding a life partner.`,
     author: "model",
     slug: 'optimal-stopping',
+    nameSw: "Kusimama kwa Wakati Bora",
+    descriptionSw: `Nadharia ya kusimama kwa wakati bora inashughulikia tatizo la kuchagua wakati sahihi wa kuchukua hatua fulani ili kuongeza zawadi au kupunguza gharama. Mfano maarufu zaidi ni "tatizo la katibu" au "kanuni ya 37%": unapotathmini mfululizo wa chaguo kwa mpangilio (kama wagombea wa kazi au vyumba), unapaswa kutumia takriban 37% ya muda wako kuchunguza na kukataa chaguo zote, kisha uchague chaguo linalofuata linalozidi zote za awali. Mkakati huu unaotokana na hisabati unalinganisha ubadilishanaji kati ya kukusanya taarifa zaidi na hatari ya kupoteza fursa nzuri. Kanuni hii inatumika kwa upana katika maamuzi yanayohusisha utafutaji na uteuzi chini ya kutokuwa na uhakika, kutoka kuajiri hadi kutafuta nyumba hadi kutafuta mwenzi wa maisha.`,
   },
 ];

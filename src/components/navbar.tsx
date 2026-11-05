@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from './ui/button';
 import { Menu } from 'lucide-react';
+import { LanguageToggle } from './language-toggle';
 
 interface NavbarProps {
   onMenuClick: () => void;
@@ -40,9 +41,9 @@ export function Navbar({ onMenuClick }: NavbarProps) {
         {/* Spacer to push content to the right if needed */}
         <div className="flex-1" />
 
-        {/* Optional: Add navigation items here */}
-        <div className="hidden md:flex items-center space-x-4">
-          {/* Future navigation items can go here */}
+        {/* Language toggle */}
+        <div className="flex items-center space-x-4">
+          <LanguageToggle />
         </div>
       </div>
     </nav>

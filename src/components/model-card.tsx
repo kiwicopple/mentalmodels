@@ -4,6 +4,8 @@ import { Button } from './ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { MentalModel } from '../types/mental-models';
 import { Search } from 'lucide-react';
+import { useLanguage } from '../context/language-context';
+import { localizeModel } from '../lib/localize';
 
 interface ModelCardProps {
   model: MentalModel;
@@ -26,8 +28,11 @@ const getCategoryColor = (category: string): string => {
 };
 
 export function ModelCard({ model }: ModelCardProps) {
+  const { language, t } = useLanguage();
+  const localized = localizeModel(model, language);
+
   const handleGoogleSearch = () => {
-    const searchQuery = encodeURIComponent(model.name);
+    const searchQuery = encodeURIComponent(localized.name);
     window.open(`https://www.google.com/search?q=${searchQuery}`, '_blank');
   };
 
@@ -35,8 +40,10 @@ export function ModelCard({ model }: ModelCardProps) {
     <Card className={`w-full max-w-2xl mx-auto ${getCategoryColor(model.category)}`}>
       <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
         <div className="space-y-1">
-          <CardTitle className="text-2xl font-bold">{model.name}</CardTitle>
-          <p className="text-sm text-muted-foreground">{model.category}</p>
+          <CardTitle className="text-2xl font-bold">{localized.name}</CardTitle>
+          <p className="text-sm text-muted-foreground">
+            {t(`category.${model.category}`)}
+          </p>
         </div>
         <Button
           variant="outline"
@@ -49,7 +56,7 @@ export function ModelCard({ model }: ModelCardProps) {
       </CardHeader>
       <CardContent className="space-y-4">
         <div className="text-sm leading-relaxed whitespace-pre-line">
-          {model.description}
+          {localized.description}
         </div>
       </CardContent>
     </Card>

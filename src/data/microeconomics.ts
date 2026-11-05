@@ -7,6 +7,8 @@ export const microeconomics: MentalModel[] = [
     description: `Doing one thing means not being able to do another. We live in a world of trade-offs, and the concept of opportunity cost rules all. Most aptly summarized as "there is no such thing as a free lunch."`,
     author: "model",
     slug: 'opportunity-costs',
+    nameSw: "Gharama za Fursa",
+    descriptionSw: `Kufanya jambo moja kunamaanisha kutoweza kufanya jingine. Tunaishi katika ulimwengu wa kubadilishana, na dhana ya gharama ya fursa inatawala yote. Inafupishwa vizuri zaidi kama "hakuna kitu kama chakula cha bure."`,
   },
   {
     name: "Creative Destruction",
@@ -14,6 +16,8 @@ export const microeconomics: MentalModel[] = [
     description: `Coined by economist Joseph Schumpeter, the term "creative destruction" describes the capitalistic process at work in a functioning free-market system. Motivated by personal incentives (including but not limited to financial profit), entrepreneurs will push to best one another in a never-ending game of creative one-upmanship, in the process destroying old ideas and replacing them with newer technology. Beware getting left behind.`,
     author: "model",
     slug: 'creative-destruction',
+    nameSw: "Uharibifu wa Kiubunifu",
+    descriptionSw: `Iliyobuniwa na mchumi Joseph Schumpeter, neno "uharibifu wa kiubunifu" linaeleza mchakato wa kibepari unaofanya kazi katika mfumo wa soko huria unaofanya kazi. Wakichochewa na vivutio vya kibinafsi (ikiwa ni pamoja na lakini si kwa faida ya kifedha tu), wajasiriamali watashinikiza kushindana katika mchezo usio na mwisho wa ubunifu wa kushinda, wakati wa mchakato huo wakiharibu mawazo ya zamani na kuyabadilisha na teknolojia mpya. Jihadhari usibaki nyuma.`,
   },
   {
     name: "Comparative Advantage",
@@ -21,6 +25,8 @@ export const microeconomics: MentalModel[] = [
     description: `The Scottish economist David Ricardo had an unusual and non-intuitive insight: Two individuals, firms, or countries could benefit from trading with one another even if one of them was better at everything. Comparative advantage is best seen as an applied opportunity cost: If it has the opportunity to trade, an entity gives up free gains in productivity by not focusing on what it does best.`,
     author: "model",
     slug: 'comparative-advantage',
+    nameSw: "Faida ya Kulinganisha",
+    descriptionSw: `Mchumi wa Uskoti David Ricardo alikuwa na wazo lisilo la kawaida na lisilo la kujidhihirisha: Watu wawili, makampuni, au nchi zinaweza kufaidika kwa kufanya biashara na kila mmoja hata kama mmoja wao alikuwa bora katika kila kitu. Faida ya kulinganisha inaonekana vizuri zaidi kama gharama ya fursa inayotumika: Ikiwa ina fursa ya kufanya biashara, chombo hupoteza faida za bure za uzalishaji kwa kutozingatia kile inachofanya bora zaidi.`,
   },
   {
     name: "Specialization (Pin Factory)",
@@ -28,6 +34,8 @@ export const microeconomics: MentalModel[] = [
     description: `Another Scottish economist, Adam Smith, highlighted the advantages gained in a free-market system by specialization. Rather than having a group of workers each producing an entire item from start to finish, Smith explained that it's usually far more productive to have each of them specialize in one aspect of production. He also cautioned, however, that each worker might not enjoy such a life; this is a trade-off of the specialization model.`,
     author: "model",
     slug: 'specialization-pin-factory',
+    nameSw: "Umaalumu (Kiwanda cha Pini)",
+    descriptionSw: `Mchumi mwingine wa Uskoti, Adam Smith, aliangazia faida zinazopatikana katika mfumo wa soko huria kwa umaalumu. Badala ya kuwa na kundi la wafanyakazi kila mmoja akizalisha bidhaa nzima kuanzia mwanzo hadi mwisho, Smith alieleza kwamba kwa kawaida ni tija zaidi kuwa na kila mmoja akibobea katika kipengele kimoja cha uzalishaji. Hata hivyo, alionya pia kwamba kila mfanyakazi anaweza asifurahie maisha kama hayo; hili ni badilishano la mfano wa umaalumu.`,
   },
   {
     name: "Seizing the Middle",
@@ -35,6 +43,8 @@ export const microeconomics: MentalModel[] = [
     description: `In chess, the winning strategy is usually to seize control of the middle of the board, so as to maximize the potential moves that can be made and control the movement of the maximal number of pieces. The same strategy works profitably in business, as can be demonstrated by John D. Rockefeller's control of the refinery business in the early days of the oil trade and Microsoft's control of the operating system in the early days of the software trade.`,
     author: "model",
     slug: 'seizing-the-middle',
+    nameSw: "Kuteka Njia ya Kati",
+    descriptionSw: `Katika chesi, mkakati wa kushinda kwa kawaida ni kuteka udhibiti wa katikati ya ubao, ili kuongeza hatua zinazowezekana na kudhibiti mwendo wa idadi kubwa zaidi ya vipande. Mkakati huo huo hufanya kazi kwa faida katika biashara, kama inavyoweza kuonyeshwa na udhibiti wa John D. Rockefeller wa biashara ya kusafisha mafuta katika siku za mwanzo za biashara ya mafuta na udhibiti wa Microsoft wa mfumo wa uendeshaji katika siku za mwanzo za biashara ya programu.`,
   },
   {
     name: "Trademarks, Patents, and Copyrights",
@@ -42,6 +52,8 @@ export const microeconomics: MentalModel[] = [
     description: `These three concepts, along with other related ones, protect the creative work produced by enterprising individuals, thus creating additional incentives for creativity and promoting the creative-destruction model of capitalism. Without these protections, information and creative workers have no defense against their work being freely distributed.`,
     author: "model",
     slug: 'trademarks-patents-and-copyrights',
+    nameSw: "Alama za Biashara, Hataza, na Hakimiliki",
+    descriptionSw: `Dhana hizi tatu, pamoja na nyingine zinazohusiana, zinalinda kazi ya ubunifu inayozalishwa na watu wajasiriamali, hivyo kuunda vivutio vya ziada vya ubunifu na kukuza mfano wa uharibifu wa kiubunifu wa ubepari. Bila ulinzi huu, taarifa na wafanyakazi wa ubunifu hawana ulinzi dhidi ya kazi zao kusambazwa kwa uhuru.`,
   },
   {
     name: "Double-Entry Bookkeeping",
@@ -49,6 +61,8 @@ export const microeconomics: MentalModel[] = [
     description: `One of the marvels of modern capitalism has been the bookkeeping system introduced in Genoa in the 14th century. The double-entry system requires that every entry, such as income, also be entered into another corresponding account. Correct double-entry bookkeeping acts as a check on potential accounting errors and allows for accurate records and thus, more accurate behavior by the owner of a firm.`,
     author: "model",
     slug: 'double-entry-bookkeeping',
+    nameSw: "Uwekaji Hesabu wa Kuingiza Mara Mbili",
+    descriptionSw: `Moja ya maajabu ya ubepari wa kisasa imekuwa mfumo wa uwekaji hesabu ulioanzishwa Genoa katika karne ya 14. Mfumo wa kuingiza mara mbili unahitaji kwamba kila kuingiza, kama mapato, pia kuwekwa katika akaunti nyingine inayolingana. Uwekaji hesabu sahihi wa kuingiza mara mbili hufanya kama hundi ya makosa ya uhasibu yanayoweza kutokea na inaruhusu rekodi sahihi na hivyo, tabia sahihi zaidi ya mmiliki wa kampuni.`,
   },
   {
     name: "Utility (Marginal, Diminishing, Increasing)",
@@ -56,6 +70,8 @@ export const microeconomics: MentalModel[] = [
     description: `The usefulness of additional units of any good tends to vary with scale. Marginal utility allows us to understand the value of one additional unit, and in most practical areas of life, that utility diminishes at some point. On the other hand, in some cases, additional units are subject to a "critical point" where the utility function jumps discretely up or down. As an example, giving water to a thirsty man has diminishing marginal utility with each additional unit, and can eventually kill him with enough units.`,
     author: "model",
     slug: 'utility-marginal-diminishing-increasing',
+    nameSw: "Thamani ya Matumizi (Kando, Inayopungua, Inayoongezeka)",
+    descriptionSw: `Umuhimu wa vitengo vya ziada vya bidhaa yoyote huelekea kubadilika na kiwango. Thamani ya matumizi ya kando (marginal utility) inaturuhusu kuelewa thamani ya kitengo kimoja cha ziada, na katika maeneo mengi ya kivitendo ya maisha, thamani hiyo hupungua kwa wakati fulani. Kwa upande mwingine, katika baadhi ya kesi, vitengo vya ziada vinakumbwa na "hatua muhimu" ambapo kazi ya thamani huruka kwa kasi juu au chini. Kwa mfano, kumpa mtu mwenye kiu maji kuna thamani ya matumizi ya kando inayopungua kwa kila kitengo cha ziada, na hatimaye kunaweza kumuua kwa vitengo vya kutosha.`,
   },
   {
     name: "Bottlenecks",
@@ -63,6 +79,8 @@ export const microeconomics: MentalModel[] = [
     description: `A bottleneck describes the place at which a flow (of a tangible or intangible) is stopped, thus holding it back from continuous movement. As with a clogged artery or a blocked drain, a bottleneck in production of any good or service can be small but have a disproportionate impact if it is in the critical path.`,
     author: "model",
     slug: 'bottlenecks',
+    nameSw: "Vizuizi vya Mwendo (Bottlenecks)",
+    descriptionSw: `Kizuizi cha mwendo hufafanua mahali ambapo mtiririko (wa kitu kinachoonekana au kisichoonekana) unasimamishwa, hivyo kuuzuia usiendelee kusonga mfululizo. Kama mshipa ulioziba au mfereji uliofungwa, kizuizi katika uzalishaji wa bidhaa au huduma yoyote kinaweza kuwa kidogo lakini kiwe na athari isiyo na uwiano ikiwa kiko katika njia muhimu.`,
   },
   {
     name: "Prisoner's Dilemma",
@@ -70,6 +88,8 @@ export const microeconomics: MentalModel[] = [
     description: `The Prisoner's Dilemma is a famous application of game theory in which two prisoners are both better off cooperating with each other, but if one of them cheats, the other is better off cheating. Thus the dilemma. This model shows up in economic life, in war, and in many other areas of practical human life. Though the prisoner's dilemma theoretically leads to a poor result, in the real world, cooperation is nearly always possible and must be explored.`,
     author: "model",
     slug: 'prisoners-dilemma',
+    nameSw: "Mtanziko wa Mfungwa",
+    descriptionSw: `Mtanziko wa Mfungwa ni matumizi maarufu ya nadharia ya mchezo ambapo wafungwa wawili wote wana faida zaidi kwa kushirikiana, lakini ikiwa mmoja wao anadanganya, mwingine ana faida zaidi kudanganya. Kwa hiyo mtanziko. Mfano huu hujitokeza katika maisha ya kiuchumi, vitani, na katika maeneo mengine mengi ya maisha ya kivitendo ya binadamu. Ingawa mtanziko wa mfungwa, kwa nadharia, husababisha matokeo duni, katika ulimwengu halisi, ushirikiano karibu daima unawezekana na lazima uchunguzwe.`,
   },
   {
     name: "Bribery",
@@ -77,6 +97,8 @@ export const microeconomics: MentalModel[] = [
     description: `Often ignored in mainstream economics, the concept of bribery is central to human systems: Given the chance, it is often easier to pay a certain agent to look the other way than to follow the rules. The enforcer of the rules is then neutralized. This principle/agent problem can be seen as a form of arbitrage.`,
     author: "model",
     slug: 'bribery',
+    nameSw: "Rushwa (Bribery)",
+    descriptionSw: `Mara nyingi hupuuzwa katika uchumi mkuu, dhana ya rushwa ni muhimu katika mifumo ya binadamu: Ikipewa nafasi, mara nyingi ni rahisi kumlipa wakala fulani apuuze kuliko kufuata sheria. Mtekelezaji wa sheria basi anabadilishwa kuwa hana athari. Tatizo hili la kanuni/wakala linaweza kuonekana kama aina ya arbitrage.`,
   },
   {
     name: "Arbitrage",
@@ -84,6 +106,8 @@ export const microeconomics: MentalModel[] = [
     description: `Given two markets selling an identical good, an arbitrage exists if the good can profitably be bought in one market and sold at a profit in the other. This model is simple on its face, but can present itself in disguised forms: The only gas station in a 50-mile radius is also an arbitrage as it can buy gasoline and sell it at the desired profit (temporarily) without interference. Nearly all arbitrage situations eventually disappear as they are discovered and exploited.`,
     author: "model",
     slug: 'arbitrage',
+    nameSw: "Arbitrage",
+    descriptionSw: `Kwa masoko mawili yanayouza bidhaa sawa, arbitrage ipo ikiwa bidhaa inaweza kununuliwa kwa faida katika soko moja na kuuzwa kwa faida katika lingine. Mfano huu ni rahisi kwa nje, lakini unaweza kujitokeza katika aina zilizofichwa: Kituo pekee cha mafuta katika eneo la maili 50 pia ni arbitrage kwani kinaweza kununua petroli na kuiuza kwa faida inayotakikana (kwa muda) bila kuingiliwa. Karibu hali zote za arbitrage hatimaye hutoweka zinapogunduliwa na kutumiwa.`,
   },
   {
     name: "Supply and Demand",
@@ -91,6 +115,8 @@ export const microeconomics: MentalModel[] = [
     description: `The basic equation of biological and economic life is one of limited supply of necessary goods and competition for those goods. Just as biological entities compete for limited usable energy, so too do economic entities compete for limited customer wealth and limited demand for their products. The point at which supply and demand for a given good are equal is called an equilibrium; however, in practical life, equilibrium points tend to be dynamic and changing, never static.`,
     author: "model",
     slug: 'supply-and-demand',
+    nameSw: "Ugavi na Mahitaji",
+    descriptionSw: `Mlinganyo wa msingi wa maisha ya kibayolojia na kiuchumi ni ule wa ugavi mdogo wa bidhaa muhimu na ushindani wa bidhaa hizo. Kama vile viumbe vya kibayolojia vinavyoshindania nishati ndogo inayoweza kutumika, ndivyo pia viumbe vya kiuchumi vinavyoshindania utajiri mdogo wa wateja na mahitaji madogo ya bidhaa zao. Hatua ambayo ugavi na mahitaji ya bidhaa fulani ni sawa inaitwa usawa (equilibrium); hata hivyo, katika maisha ya kivitendo, pointi za usawa huelekea kuwa zenye mabadiliko, kamwe si thabiti.`,
   },
   {
     name: "Scarcity",
@@ -98,5 +124,7 @@ export const microeconomics: MentalModel[] = [
     description: `Game theory describes situations of conflict, limited resources, and competition. Given a certain situation and a limited amount of resources and time, what decisions are competitors likely to make, and which should they make? One important note is that traditional game theory may describe humans as more rational than they really are. Game theory is theory, after all.`,
     author: "model",
     slug: 'scarcity',
+    nameSw: "Uhaba (Scarcity)",
+    descriptionSw: `Nadharia ya mchezo inaeleza hali za migogoro, rasilimali chache, na ushindani. Kwa hali fulani na kiasi kidogo cha rasilimali na muda, ni maamuzi gani washindani wanaweza kufanya, na wanapaswa kufanya yapi? Ujumbe mmoja muhimu ni kwamba nadharia ya mchezo ya jadi inaweza kueleza wanadamu kuwa wenye mantiki zaidi kuliko walivyo kweli. Nadharia ya mchezo ni nadharia, baada ya yote.`,
   },
 ];

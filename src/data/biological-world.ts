@@ -7,6 +7,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `All creatures respond to incentives to keep themselves alive. This is the basic insight of biology. Constant incentives will tend to cause a biological entity to have constant behavior, to an extent. Humans are included and are particularly great examples of the incentive-driven nature of biology; however, humans are complicated in that their incentives can be hidden or intangible. The rule of life is to repeat what works and has been rewarded.`,
     author: "model",
     slug: 'incentives',
+    nameSw: "Vivutio (Incentives)",
+    descriptionSw: `Viumbe vyote huitikia vivutio ili kujiweka hai. Hili ndilo wazo la msingi la baiolojia. Vivutio vya mara kwa mara vitaelekea kusababisha kiumbe cha kibayolojia kuwa na tabia ya mara kwa mara, kwa kiwango fulani. Wanadamu wamejumuishwa na ni mifano bora hasa ya asili ya baiolojia inayoendeshwa na vivutio; hata hivyo, wanadamu ni tata kwa kuwa vivutio vyao vinaweza kuwa vimefichwa au visivyoonekana. Kanuni ya maisha ni kurudia kinachofanya kazi na kilichozawadiwa.`,
   },
   {
     name: "Cooperation (Including Symbiosis)",
@@ -14,6 +16,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `Competition tends to describe most biological systems, but cooperation at various levels is just as important a dynamic. In fact, the cooperation of a bacterium and a simple cell probably created the first complex cell and all of the life we see around us. Without cooperation, no group survives, and the cooperation of groups gives rise to even more complex versions of organization. Cooperation and competition tend to coexist at multiple levels.`,
     author: "model",
     slug: 'cooperation-including-symbiosis',
+    nameSw: "Ushirikiano (Ikiwa ni pamoja na Symbiosis)",
+    descriptionSw: `Ushindani huelekea kueleza mifumo mingi ya kibayolojia, lakini ushirikiano katika viwango mbalimbali ni nguvu muhimu sawa. Kwa kweli, ushirikiano wa bakteria na seli rahisi labda uliunda seli ya kwanza tata na maisha yote tunayoyaona yanatuzunguka. Bila ushirikiano, hakuna kundi linalookoka, na ushirikiano wa makundi huleta aina tata zaidi za mpangilio. Ushirikiano na ushindani huelekea kuwepo pamoja katika viwango vingi.`,
   },
   {
     name: "Tendency to Minimize Energy Output (Mental & Physical)",
@@ -21,6 +25,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `In a physical world governed by thermodynamics and competition for limited energy and resources, any biological organism that was wasteful with energy would be at a severe disadvantage for survival. Thus, we see in most instances that behavior is governed by a tendency to minimize energy usage when at all possible.`,
     author: "model",
     slug: 'tendency-to-minimize-energy-output-mental-physical',
+    nameSw: "Mwelekeo wa Kupunguza Matumizi ya Nishati (Kiakili na Kimwili)",
+    descriptionSw: `Katika ulimwengu wa kimwili unaotawaliwa na thermodynamics na ushindani wa nishati na rasilimali chache, kiumbe chochote cha kibayolojia kinachopoteza nishati kingekuwa katika hasara kubwa ya kuishi. Kwa hiyo, tunaona katika hali nyingi kwamba tabia inatawaliwa na mwelekeo wa kupunguza matumizi ya nishati inapowezekana.`,
   },
   {
     name: "Adaptation",
@@ -28,6 +34,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `Species tend to adapt to their surroundings in order to survive, given the combination of their genetics and their environment – an always-unavoidable combination. However, adaptations made in an individual's lifetime are not passed down genetically, as was once thought: Populations of species adapt through the process of evolution by natural selection, as the most-fit examples of the species replicate at an above-average rate.`,
     author: "model",
     slug: 'adaptation',
+    nameSw: "Ubadilikaji (Adaptation)",
+    descriptionSw: `Spishi huelekea kuzoea mazingira yao ili kuishi, kutokana na mchanganyiko wa jenetiki zao na mazingira yao - mchanganyiko usioweza kuepukika daima. Hata hivyo, mabadiliko yanayofanywa katika maisha ya mtu binafsi hayapitishwi kijenetiki, kama ilivyokuwa ikidhaniwa zamani: Idadi ya spishi huzoea kupitia mchakato wa mageuzi kwa uteuzi wa asili, kwani mifano inayofaa zaidi ya spishi huzaliana kwa kiwango cha juu kuliko wastani.`,
   },
   {
     name: "Evolution by Natural Selection",
@@ -35,6 +43,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `Evolution by natural selection was once called "the greatest idea anyone ever had." In the 19th century, Charles Darwin and Alfred Russel Wallace simultaneous realized that species evolve through random mutation and differential survival rates. If we call human intervention in animal-breeding an example of "artificial selection," we can call Mother Nature deciding the success or failure of a particular mutation "natural selection." Those best suited for survival tend to be preserved. But of course, conditions change.`,
     author: "model",
     slug: 'evolution-by-natural-selection',
+    nameSw: "Mageuzi kwa Uteuzi wa Asili",
+    descriptionSw: `Mageuzi kwa uteuzi wa asili yalikuwa yakiitwa "wazo kuu zaidi lililowahi kuwepo." Katika karne ya 19, Charles Darwin na Alfred Russel Wallace waligundua kwa wakati mmoja kwamba spishi hubadilika kupitia mabadiliko ya nasibu na viwango tofauti vya kuishi. Ikiwa tunaita uingiliaji wa binadamu katika ufugaji wa wanyama mfano wa "uteuzi wa bandia", tunaweza kuita uamuzi wa Mama Asili wa mafanikio au kushindwa kwa mabadiliko fulani "uteuzi wa asili." Wale wanaofaa zaidi kuishi huelekea kuhifadhiwa. Lakini bila shaka, hali hubadilika.`,
   },
   {
     name: "The Red Queen Effect (Co-evolutionary Arms Race)",
@@ -42,6 +52,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `The evolution-by-natural-selection model leads to something of an arms race among species competing for limited resources. When one species evolves an advantageous adaptation, a competing species must respond in kind or fail as a species. Standing pat can mean falling behind. This arms race is called the Red Queen Effect for the character in Alice in Wonderland who said, "Now, here, you see, it takes all the running you can do, to keep in the same place."`,
     author: "model",
     slug: 'the-red-queen-effect-co-evolutionary-arms-race',
+    nameSw: "Athari ya Malkia Mwekundu (Mashindano ya Silaha ya Mageuzi)",
+    descriptionSw: `Mfano wa mageuzi kwa uteuzi wa asili husababisha aina ya mashindano ya silaha kati ya spishi zinazoshindania rasilimali chache. Spishi moja inapoendeleza badiliko la manufaa, spishi pinzani lazima ijibu kwa namna sawa au ishindwe kama spishi. Kusimama palepale kunaweza kumaanisha kubaki nyuma. Mashindano haya ya silaha yanaitwa Athari ya Malkia Mwekundu kutokana na mhusika katika "Alice in Wonderland" aliyesema, "Sasa, hapa, unaona, inachukua mbio zote uwezazo, kubaki mahali pale pale."`,
   },
   {
     name: "Replication",
@@ -49,6 +61,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `A fundamental building block of diverse biological life is high-fidelity replication. The fundamental unit of replication seems to be the DNA molecule, which provides a blueprint for the offspring to be built from physical building blocks. There are a variety of replication methods, but most can be lumped into sexual and asexual.`,
     author: "model",
     slug: 'replication',
+    nameSw: "Uzalishaji (Replication)",
+    descriptionSw: `Msingi wa ujenzi wa maisha mbalimbali ya kibayolojia ni uzalishaji wa uaminifu wa hali ya juu. Kitengo cha msingi cha uzalishaji kinaonekana kuwa molekuli ya DNA, ambayo hutoa ramani kwa mtoto kujengwa kutoka kwa vifaa vya kimwili. Kuna njia mbalimbali za uzalishaji, lakini nyingi zinaweza kuwekwa katika makundi mawili: ya kingono na yasiyo ya kingono.`,
   },
   {
     name: "Hierarchical and Other Organizing Instincts",
@@ -56,6 +70,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `Most complex biological organisms have an innate feel for how they should organize. While not all of them end up in hierarchical structures, many do, especially in the animal kingdom. Human beings like to think they are outside of this, but they feel the hierarchical instinct as strongly as any other organism.`,
     author: "model",
     slug: 'hierarchical-and-other-organizing-instincts',
+    nameSw: "Silika za Kimadaraja na Nyingine za Kupanga",
+    descriptionSw: `Viumbe wengi tata wa kibayolojia wana hisia ya kiasili ya jinsi wanavyopaswa kujipanga. Ingawa si wote wanaoishia katika miundo ya kimadaraja, wengi huishia hivyo, hasa katika ufalme wa wanyama. Wanadamu wanapenda kufikiri kwamba wako nje ya hili, lakini wanahisi silika ya kimadaraja kwa nguvu sawa na kiumbe kingine chochote.`,
   },
   {
     name: "Self-Preservation Instincts",
@@ -63,6 +79,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `Without a strong self-preservation instinct in an organism's DNA, it would tend to disappear over time, thus eliminating that DNA. While cooperation is another important model, the self-preservation instinct is strong in all organisms and can cause violent, erratic, and/or destructive behavior for those around them.`,
     author: "model",
     slug: 'self-preservation-instincts',
+    nameSw: "Silika za Kujihifadhi",
+    descriptionSw: `Bila silika imara ya kujihifadhi katika DNA ya kiumbe, kingeelekea kutoweka kwa muda, na hivyo kuondoa DNA hiyo. Ingawa ushirikiano ni mfano mwingine muhimu, silika ya kujihifadhi ni imara katika viumbe vyote na inaweza kusababisha tabia ya vurugu, isiyo thabiti, na/au ya uharibifu kwa wale wanaowazunguka.`,
   },
   {
     name: "Simple Physiological Reward-Seeking",
@@ -70,6 +88,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `All organisms feel pleasure and pain from simple chemical processes in their bodies which respond predictably to the outside world. Reward-seeking is an effective survival-promoting technique on average. However, those same pleasure receptors can be co-opted to cause destructive behavior, as with drug abuse.`,
     author: "model",
     slug: 'simple-physiological-reward-seeking',
+    nameSw: "Kutafuta Zawadi za Kifiziolojia Rahisi",
+    descriptionSw: `Viumbe vyote huhisi furaha na maumivu kutokana na michakato rahisi ya kemikali katika miili yao ambayo huitikia kwa kutabirika kwa ulimwengu wa nje. Kutafuta zawadi ni mbinu yenye ufanisi ya kukuza uhai kwa wastani. Hata hivyo, vipokezi hivyo hivyo vya furaha vinaweza kutumiwa kusababisha tabia ya uharibifu, kama ilivyo kwa matumizi mabaya ya dawa za kulevya.`,
   },
   {
     name: "Exaptation",
@@ -77,6 +97,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `Introduced by the biologist Steven Jay Gould, an exaptation refers to a trait developed for one purpose that is later used for another purpose. This is one way to explain the development of complex biological features like an eyeball; in a more primitive form, it may have been used for something else. Once it was there, and once it developed further, 3D sight became possible.`,
     author: "model",
     slug: 'exaptation',
+    nameSw: "Kubadilisha Kazi (Exaptation)",
+    descriptionSw: `Iliyoanzishwa na mwanabaiolojia Steven Jay Gould, exaptation inarejelea sifa iliyoendelezwa kwa kusudi moja ambayo baadaye inatumika kwa kusudi lingine. Hii ni njia mojawapo ya kueleza maendeleo ya vipengele tata vya kibayolojia kama jicho; katika umbo la awali zaidi, linaweza kuwa lilitumika kwa kitu kingine. Mara lilipokuwepo, na lilipoendelea zaidi, kuona kwa pande tatu (3D) kuliwezekana.`,
   },
   {
     name: "Extinction",
@@ -84,6 +106,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `The inability to survive can cause an extinction event, whereby an entire species ceases to compete and replicate effectively. Once its numbers have dwindled to a critically low level, an extinction can be unavoidable (and predictable) given the inability to effectively replicate in large enough numbers.`,
     author: "model",
     slug: 'extinction',
+    nameSw: "Kutoweka kwa Spishi (Extinction)",
+    descriptionSw: `Kutoweza kuishi kunaweza kusababisha tukio la kutoweka, ambapo spishi nzima huacha kushindana na kuzaliana kwa ufanisi. Mara idadi yake inapopungua hadi kiwango cha chini sana, kutoweka kunaweza kuwa hakuepukiki (na kwa kutabirika) kutokana na kutoweza kuzaliana kwa ufanisi katika idadi kubwa ya kutosha.`,
   },
   {
     name: "Ecosystems",
@@ -91,6 +115,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `An ecosystem describes any group of organisms coexisting with the natural world. Most ecosystems show diverse forms of life taking on different approaches to survival, with such pressures leading to varying behavior. Social systems can be seen in the same light as the physical ecosystems and many of the same conclusions can be made.`,
     author: "model",
     slug: 'ecosystems',
+    nameSw: "Mifumo ya Ikolojia (Ecosystems)",
+    descriptionSw: `Mfumo wa ikolojia unaeleza kundi lolote la viumbe linaloishi pamoja na ulimwengu wa asili. Mifumo mingi ya ikolojia inaonyesha aina mbalimbali za maisha zinazochukua njia tofauti za kuishi, na shinikizo hizo zikisababisha tabia mbalimbali. Mifumo ya kijamii inaweza kuonekana kwa namna sawa na mifumo ya kimwili ya ikolojia na hitimisho nyingi sawa zinaweza kufanywa.`,
   },
   {
     name: "Niches",
@@ -98,6 +124,8 @@ export const biologicalWorld: MentalModel[] = [
     description: `Most organisms find a niche: a method of competing and behaving for survival. Usually, a species will select a niche for which it is best adapted. The danger arises when multiple species begin competing for the same niche, which can cause an extinction – there can be only so many species doing the same thing before limited resources give out.`,
     author: "model",
     slug: 'niches',
+    nameSw: "Nafasi Maalum (Niches)",
+    descriptionSw: `Viumbe wengi hupata nafasi maalum (niche): njia ya kushindana na kufanya kwa ajili ya kuishi. Kwa kawaida, spishi itachagua nafasi maalum ambayo imezoea vizuri zaidi. Hatari hutokea wakati spishi nyingi zinaanza kushindania nafasi ile ile maalum, jambo linaloweza kusababisha kutoweka - kunaweza kuwa na idadi fulani tu ya spishi zinazofanya kitu kile kile kabla ya rasilimali chache kuisha.`,
   },
   {
     name: "Dunbar's Number",
@@ -105,5 +133,7 @@ export const biologicalWorld: MentalModel[] = [
     description: `The primatologist Robin Dunbar observed through study that the number of individuals a primate can get to know and trust closely is related to the size of its neocortex. Extrapolating from his study of primates, Dunbar theorized that the Dunbar number for a human being is somewhere in the 100–250 range, which is supported by certain studies of human behavior and social networks.`,
     author: "model",
     slug: 'dunbars-number',
+    nameSw: "Nambari ya Dunbar",
+    descriptionSw: `Mtaalamu wa nyani Robin Dunbar aligundua kupitia utafiti kwamba idadi ya watu ambao nyani anaweza kuwajua na kuwaamini kwa karibu inahusiana na ukubwa wa neocortex yake. Akihesabu kutoka kwa utafiti wake wa nyani, Dunbar alitoa nadharia kwamba nambari ya Dunbar kwa binadamu iko katika kiwango cha 100-250, ambayo inaungwa mkono na tafiti fulani za tabia ya binadamu na mitandao ya kijamii.`,
   },
 ];
